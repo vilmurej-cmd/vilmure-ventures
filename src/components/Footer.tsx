@@ -53,7 +53,7 @@ export default function Footer() {
               Contact
             </h4>
             <p className="text-white/40 text-sm">josh@myezre.ai</p>
-            <p className="text-white/40 text-sm mt-1">269-487-4847</p>
+            <p className="text-white/40 text-sm mt-1">269-932-5740</p>
             <p className="text-white/40 text-sm mt-4">
               Stevensville, Michigan — Founded 2025
             </p>

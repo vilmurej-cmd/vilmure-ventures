@@ -160,10 +160,10 @@ export default function InvestPage() {
                 josh@myezre.ai
               </a>
               <a
-                href="tel:2694874847"
+                href="tel:2699325740"
                 className="text-white/60 text-lg hover:text-white/70 transition-colors block mt-2"
               >
-                269-487-4847
+                269-932-5740
               </a>
               <div className="mt-8 inline-flex items-center gap-2 border border-white/10 rounded-full px-5 py-2">
                 <div className="w-2 h-2 rounded-full bg-white/20" />

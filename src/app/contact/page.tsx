@@ -42,10 +42,10 @@ export default function ContactPage() {
                     Phone
                   </p>
                   <a
-                    href="tel:2694874847"
+                    href="tel:2699325740"
                     className="text-white text-lg hover:text-white/70 transition-colors"
                   >
-                    269-487-4847
+                    269-932-5740
                   </a>
                 </div>
 
@@ -68,14 +68,6 @@ export default function ContactPage() {
                       className="text-white/40 hover:text-white transition-colors text-sm"
                     >
                       LinkedIn
-                    </a>
-                    <a
-                      href="https://x.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/40 hover:text-white transition-colors text-sm"
-                    >
-                      X / Twitter
                     </a>
                   </div>
                 </div>
