@@ -101,7 +101,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center">
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 text-center">
         <ScrollReveal>
           <Prism />
         </ScrollReveal>
@@ -154,11 +154,11 @@ export default function Home() {
       </section>
 
       {/* Spectrum Line Divider */}
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Portfolio Section */}
-      <section id="platforms" className="py-28 md:py-36 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section id="platforms" className="py-20 md:py-28 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               Eight Platforms. Eight Missions.
@@ -265,10 +265,10 @@ export default function Home() {
       </section>
 
       {/* Spectrum Line Divider */}
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Numbers Section */}
-      <section className="py-28 md:py-36 px-6">
+      <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-20" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
@@ -293,10 +293,10 @@ export default function Home() {
       </section>
 
       {/* Spectrum Line Divider */}
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Thesis Section */}
-      <section className="py-28 md:py-36 px-6">
+      <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-16" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
@@ -331,10 +331,10 @@ export default function Home() {
       </section>
 
       {/* Spectrum Line Divider */}
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* CTA Section */}
-      <section className="py-28 md:py-36 px-6 text-center">
+      <section className="py-20 md:py-28 px-6 md:px-12 text-center">
         <ScrollReveal>
           <p className="text-white/70 text-xl md:text-2xl font-light max-w-xl mx-auto mb-10 leading-[1.8]">
             Interested in our platforms? Want to partner? Let&apos;s talk.

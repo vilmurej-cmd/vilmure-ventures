@@ -4,22 +4,24 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 text-center">
-        <ScrollReveal>
-          <h1 className="text-5xl md:text-7xl font-black tracking-wide">Contact</h1>
-          <p className="mt-6 text-white/50 text-lg md:text-xl max-w-2xl mx-auto">
-            Let&apos;s talk about what we can build together.
-          </p>
-        </ScrollReveal>
+      <section className="pt-32 pb-16 px-6 md:px-12 text-center">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Contact</h1>
+            <p className="mt-6 text-white/50 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
+              Let&apos;s talk about what we can build together.
+            </p>
+          </ScrollReveal>
+        </div>
       </section>
 
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
-      <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="py-20 md:py-28 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Contact Info */}
           <ScrollReveal>
-            <div className="glass-panel p-8 h-full">
+            <div className="glass-panel p-6 md:p-8 h-full">
               <h2 className="text-2xl font-bold mb-8">Get in Touch</h2>
 
               <div className="space-y-6">
@@ -83,7 +85,7 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <ScrollReveal delay={200}>
-            <div className="glass-panel p-8 h-full">
+            <div className="glass-panel p-6 md:p-8 h-full">
               <h2 className="text-2xl font-bold mb-8">Send a Message</h2>
 
               <form
@@ -175,7 +177,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full px-8 py-3 bg-white text-[#080810] font-semibold rounded-full hover:bg-white/90 transition-all text-sm tracking-wide"
+                  className="btn-primary w-full text-center"
                 >
                   Send Message
                 </button>

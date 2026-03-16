@@ -43,31 +43,33 @@ export default function PressPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 text-center">
-        <ScrollReveal>
-          <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Press & Media</h1>
-          <p className="mt-6 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
-            Resources for journalists, analysts, and industry observers
-          </p>
-        </ScrollReveal>
+      <section className="pt-32 pb-16 px-6 md:px-12 text-center">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Press & Media</h1>
+            <p className="mt-6 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
+              Resources for journalists, analysts, and industry observers
+            </p>
+          </ScrollReveal>
+        </div>
       </section>
 
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Story Angles */}
-      <section className="py-28 px-6">
+      <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               The Story Angles
             </h2>
-            <p className="text-white/50 text-center mb-20">Suggested for media</p>
+            <p className="text-white/50 text-center mb-16">Suggested for media</p>
           </ScrollReveal>
 
           <div className="space-y-6">
             {storyAngles.map((angle, i) => (
               <ScrollReveal key={angle.title} delay={i * 100}>
-                <div className="glass-panel p-8 relative overflow-hidden">
+                <div className="glass-panel p-6 md:p-8 relative overflow-hidden">
                   {/* Large background number */}
                   <span
                     className="absolute top-4 right-6 text-5xl font-black opacity-[0.08] pointer-events-none"
@@ -89,19 +91,19 @@ export default function PressPage() {
         </div>
       </section>
 
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Key Facts */}
-      <section className="py-28 px-6">
+      <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-20" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
+            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-16" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               Key Facts
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
-            <div className="glass-panel p-8">
+            <div className="glass-panel p-6 md:p-8">
               <div className="space-y-5">
                 {keyFacts.map((fact) => (
                   <div
@@ -120,14 +122,14 @@ export default function PressPage() {
         </div>
       </section>
 
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Brand Assets */}
-      <section className="py-28 px-6">
+      <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-black tracking-wide mb-10" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Brand Assets</h2>
-            <div className="glass-panel p-12">
+            <div className="glass-panel p-8 md:p-12">
               <div className="text-4xl font-black tracking-[0.25em] uppercase text-white mb-2">
                 VILMURE VENTURES
               </div>
@@ -143,22 +145,24 @@ export default function PressPage() {
         </div>
       </section>
 
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Media Contact */}
-      <section className="py-28 px-6 text-center">
-        <ScrollReveal>
-          <h2 className="text-2xl md:text-4xl font-black tracking-wide mb-10" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Media Contact</h2>
-          <a
-            href="mailto:josh@myezre.ai"
-            className="text-white text-lg hover:text-white/70 transition-colors"
-          >
-            josh@myezre.ai
-          </a>
-          <p className="text-white/50 text-sm mt-4">
-            For interviews, demos, or additional information
-          </p>
-        </ScrollReveal>
+      <section className="py-20 md:py-28 px-6 md:px-12 text-center">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <h2 className="text-2xl md:text-4xl font-black tracking-wide mb-10" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Media Contact</h2>
+            <a
+              href="mailto:josh@myezre.ai"
+              className="text-white text-lg hover:text-white/70 transition-colors"
+            >
+              josh@myezre.ai
+            </a>
+            <p className="text-white/50 text-sm mt-4">
+              For interviews, demos, or additional information
+            </p>
+          </ScrollReveal>
+        </div>
       </section>
     </>
   );

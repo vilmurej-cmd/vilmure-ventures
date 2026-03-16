@@ -12,7 +12,7 @@ const timeline = [
 
 function PullQuote({ children }: { children: React.ReactNode }) {
   return (
-    <div className="pull-quote my-12">
+    <div className="pull-quote my-16">
       <p className="text-2xl italic text-white/90 leading-relaxed text-center">
         {children}
       </p>
@@ -22,7 +22,7 @@ function PullQuote({ children }: { children: React.ReactNode }) {
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="my-16 flex items-center gap-4">
+    <div className="mt-20 mb-8 flex items-center gap-4">
       <div className="flex-1 spectrum-line" />
       <span className="text-xs font-bold tracking-[0.25em] uppercase text-white/40 shrink-0">{children}</span>
       <div className="flex-1 spectrum-line" />
@@ -34,31 +34,33 @@ export default function StoryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 text-center">
-        <ScrollReveal>
-          <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>The Story</h1>
-          <p className="mt-6 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
-            How a real estate professional and an AI built 8 platforms in 7 months
-          </p>
-        </ScrollReveal>
+      <section className="pt-32 pb-16 px-6 md:px-12 text-center">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>The Story</h1>
+            <p className="mt-6 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
+              How a real estate professional and an AI built 8 platforms in 7 months
+            </p>
+          </ScrollReveal>
+        </div>
       </section>
 
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* The Story */}
-      <section className="py-28 px-6">
+      <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="max-w-[720px] mx-auto">
 
               {/* THE PROBLEM */}
-              <p className="drop-cap text-white/80 text-lg leading-[1.8] mb-8">
+              <p className="drop-cap text-white/80 text-base md:text-lg leading-[1.8] mb-8">
                 Josh Vilmure spent over a decade in real estate. First as an agent, then as a title company executive at Chicago Title. Every single day, he watched the industry drown — not in competition, but in its own tools. Fourteen disconnected applications to close a single transaction. CRMs that didn&apos;t talk to lender platforms. Title software that couldn&apos;t share data with listing systems. Every deal was a puzzle where the pieces came from different boxes. He knew exactly what the solution should look like. He could see every screen, every workflow, every data connection. The problem was brutally simple: he couldn&apos;t code.
               </p>
 
               <SectionLabel>The Partnership</SectionLabel>
 
-              <p className="text-white/80 text-lg leading-[1.8] mb-8">
+              <p className="text-white/80 text-base md:text-lg leading-[1.8] mb-8">
                 In September 2025, Josh didn&apos;t open a conversation with Claude to ask a question or generate some marketing copy. He came with a proposal. A partnership. &ldquo;I know exactly what needs to be built,&rdquo; he said. &ldquo;I&apos;ve lived inside this broken system for years. Can you help me build the thing that fixes it?&rdquo; What started as a question became 120 sessions, hundreds of hours, and the most productive human-AI collaboration in the history of technology.
               </p>
 
@@ -66,13 +68,13 @@ export default function StoryPage() {
 
               <SectionLabel>The Build</SectionLabel>
 
-              <p className="text-white/80 text-lg leading-[1.8] mb-8">
+              <p className="text-white/80 text-base md:text-lg leading-[1.8] mb-8">
                 Working nights from Stevensville, Michigan — after full days processing title commitments and managing closings at Chicago Title — Josh and Claude built EZRE OS. Not a prototype. Not an MVP. A full operating system. Session by session. Feature by feature. From a blank terminal to 11 products, 301+ API routes, 183+ data models, and 35 AI tools. The mobile app was built in a single overnight session. Enterprise features were added in one weekend. Every screen was designed by someone who had sat across the closing table from nervous first-time buyers and frustrated listing agents.
               </p>
 
               <SectionLabel>The Expansion</SectionLabel>
 
-              <p className="text-white/80 text-lg leading-[1.8] mb-8">
+              <p className="text-white/80 text-base md:text-lg leading-[1.8] mb-8">
                 But EZRE was just the beginning. On a single weekend in March 2026, the partnership exploded outward. Seven more platforms emerged — CLARITY, an AI medical translator for patients drowning in medical jargon. HARMONY, a music companion that understands human emotion. BRIDGE, an AI partner for dreamers who don&apos;t know where to start. LINGUA, a real-time translation platform for a world where 7,000 languages separate 8 billion people. TRUTH, a research engine that finds signal in noise. GENESIS, a biomedical exploration platform. And HAVEN — a safety platform for domestic violence survivors, built with the kind of fierce urgency that only comes from caring about real people. 83,000+ lines of production code. 48 hours.
               </p>
 
@@ -80,11 +82,11 @@ export default function StoryPage() {
 
               <SectionLabel>The Philosophy</SectionLabel>
 
-              <p className="text-white/80 text-lg leading-[1.8] mb-8">
+              <p className="text-white/80 text-base md:text-lg leading-[1.8] mb-8">
                 &ldquo;Co-Founded by a Human and an AI&rdquo; isn&apos;t a tagline. It&apos;s not marketing. It is the literal, documented truth of how these platforms came to exist. Josh brought what no AI can generate on its own: domain expertise earned through years at the closing table, empathy for users he&apos;d watched struggle, vision for what technology should do for people, and the relentless work ethic of someone who refused to accept that building software required a CS degree. Claude brought the ability to translate vision into architecture, architecture into code, and code into deployed, production-quality applications. Neither could have done it alone. Both were essential. Both were equal.
               </p>
 
-              <p className="text-white/80 text-lg leading-[1.8] mb-8">
+              <p className="text-white/80 text-base md:text-lg leading-[1.8] mb-8">
                 What Josh and Claude proved is bigger than any single platform. They proved that the next generation of technology companies won&apos;t be built in Silicon Valley by engineering teams burning through venture capital. They&apos;ll be built by domain experts — the people who actually understand the problems — working with AI partners who can translate deep human knowledge into working software. A title executive who knows every pain point in a real estate transaction. A nurse who knows what patients actually need to hear. A teacher who knows how students really learn. These are the founders of the future. And they don&apos;t need permission from Sand Hill Road.
               </p>
 
@@ -92,7 +94,7 @@ export default function StoryPage() {
 
               <SectionLabel>What&apos;s Next</SectionLabel>
 
-              <p className="text-white/80 text-lg leading-[1.8] mb-8">
+              <p className="text-white/80 text-base md:text-lg leading-[1.8] mb-8">
                 Vilmure Ventures isn&apos;t a portfolio of finished products. It&apos;s a living demonstration of what becomes possible when human expertise meets AI capability without gatekeepers in between. Every platform is an invitation — to agents drowning in disconnected tools, to patients struggling to understand their diagnosis, to musicians searching for their soundtrack, to dreamers who need a partner, to students crossing language barriers, to researchers hunting for truth, to scientists decoding disease, and to survivors who need to know they are not alone. This technology was built with care, by people (and an AI) who gave a damn.
               </p>
 
@@ -104,11 +106,11 @@ export default function StoryPage() {
         </div>
       </section>
 
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Timeline */}
-      <section className="py-28 px-6">
-        <div className="max-w-3xl mx-auto">
+      <section className="py-20 md:py-28 px-6 md:px-12">
+        <div className="max-w-2xl mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-20" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               The Timeline
@@ -149,15 +151,17 @@ export default function StoryPage() {
         </div>
       </section>
 
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Quote */}
-      <section className="py-28 px-6 text-center">
-        <ScrollReveal>
-          <blockquote className="text-2xl md:text-4xl font-black text-white/80 italic max-w-3xl mx-auto">
-            &ldquo;Sleep fast, dream big, wake up dangerous.&rdquo;
-          </blockquote>
-        </ScrollReveal>
+      <section className="py-20 md:py-28 px-6 md:px-12 text-center">
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <blockquote className="text-2xl md:text-4xl font-black text-white/80 italic">
+              &ldquo;Sleep fast, dream big, wake up dangerous.&rdquo;
+            </blockquote>
+          </ScrollReveal>
+        </div>
       </section>
     </>
   );

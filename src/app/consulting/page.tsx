@@ -41,24 +41,26 @@ export default function ConsultingPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 text-center">
-        <ScrollReveal>
-          <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-            <span style={{ color: '#06B6D4' }}>EZRE</span> Consulting
-          </h1>
-          <p className="mt-6 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
-            Technology strategy and implementation for real estate professionals
-          </p>
-        </ScrollReveal>
-      </section>
-
-      <div className="spectrum-line" />
-
-      {/* Services */}
-      <section className="py-28 px-6">
+      <section className="pt-32 pb-16 px-6 md:px-12 text-center">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-20" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
+            <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
+              <span style={{ color: '#06B6D4' }}>EZRE</span> Consulting
+            </h1>
+            <p className="mt-6 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
+              Technology strategy and implementation for real estate professionals
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="spectrum-line my-8" />
+
+      {/* Services */}
+      <section className="py-20 md:py-28 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-16" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               Services
             </h2>
           </ScrollReveal>
@@ -75,10 +77,10 @@ export default function ConsultingPage() {
             </defs>
           </svg>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {services.map((service, i) => (
               <ScrollReveal key={service.title} delay={i * 100}>
-                <div className="glass-panel p-8 h-full">
+                <div className="glass-panel p-6 md:p-8 h-full">
                   <div className="mb-4">
                     <service.Icon
                       className="w-12 h-12"
@@ -95,14 +97,14 @@ export default function ConsultingPage() {
         </div>
       </section>
 
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Pricing */}
-      <section className="py-28 px-6">
+      <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-black tracking-wide mb-10" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Pricing</h2>
-            <div className="glass-panel p-8 md:p-12">
+            <div className="glass-panel p-6 md:p-12">
               <p className="text-white/70 text-lg mb-6 leading-[1.8]">
                 Every engagement starts with a conversation.
               </p>
@@ -121,13 +123,13 @@ export default function ConsultingPage() {
         </div>
       </section>
 
-      <div className="spectrum-line" />
+      <div className="spectrum-line my-8" />
 
       {/* Why Us */}
-      <section className="py-28 px-6">
+      <section className="py-20 md:py-28 px-6 md:px-12">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-16" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
+            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-12" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               Why Us
             </h2>
           </ScrollReveal>
@@ -135,7 +137,7 @@ export default function ConsultingPage() {
           <div className="space-y-6">
             {reasons.map((reason, i) => (
               <ScrollReveal key={i} delay={i * 150}>
-                <div className="glass-panel p-8 flex items-start gap-4">
+                <div className="glass-panel p-6 md:p-8 flex items-start gap-4">
                   <div
                     className="w-2 h-2 rounded-full mt-2 shrink-0"
                     style={{ backgroundColor: '#06B6D4' }}
