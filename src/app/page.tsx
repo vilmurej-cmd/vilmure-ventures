@@ -87,14 +87,14 @@ const platforms = [
 ];
 
 const stats = [
-  { end: 8, suffix: '', label: 'Platforms' },
-  { end: 83000, suffix: '+', label: 'Lines of Code' },
-  { end: 359, suffix: '+', label: 'API Routes' },
-  { end: 241, suffix: '+', label: 'Pages' },
-  { end: 75, suffix: '+', label: 'Languages' },
-  { end: 120, suffix: '', label: 'Build Sessions' },
-  { end: 0, prefix: '$', suffix: '', label: 'VC Raised' },
-  { end: 7, suffix: '', label: 'Months' },
+  { end: 8, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 83000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
+  { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
+  { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
+  { end: 75, suffix: '+', label: 'Languages', color: '#E11D48' },
+  { end: 120, suffix: '', label: 'Build Sessions', color: '#00E5FF' },
+  { end: 0, prefix: '$', suffix: '', label: 'VC Raised', color: '#A78BFA' },
+  { end: 7, suffix: '', label: 'Months', color: '#00FF94' },
 ];
 
 export default function Home() {
@@ -107,19 +107,19 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal delay={200}>
-          <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-[0.15em] uppercase text-white mt-8 hover:spectrum-text transition-all duration-700">
+          <h1 className="spectrum-wordmark text-5xl sm:text-7xl md:text-8xl font-black tracking-[0.15em] uppercase mt-12">
             VILMURE VENTURES
           </h1>
         </ScrollReveal>
 
         <ScrollReveal delay={400}>
-          <p className="mt-6 text-xl md:text-2xl text-white/60 font-light max-w-2xl">
+          <p className="mt-8 text-xl md:text-2xl text-white/80 font-light max-w-2xl leading-relaxed">
             Connect the Disconnected. Protect the Unprotected.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={600}>
-          <p className="mt-8 text-sm md:text-base text-white/40 max-w-2xl leading-relaxed">
+          <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
             8 platforms. 83,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
@@ -129,16 +129,16 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal delay={800}>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <div className="mt-12 flex flex-col sm:flex-row gap-4">
             <a
               href="#platforms"
-              className="px-8 py-3 bg-white text-[#080810] font-semibold rounded-full hover:bg-white/90 transition-all text-sm tracking-wide"
+              className="btn-primary"
             >
               Explore Our Platforms
             </a>
             <Link
               href="/contact"
-              className="px-8 py-3 border border-white/20 text-white font-semibold rounded-full hover:bg-white/5 transition-all text-sm tracking-wide"
+              className="btn-secondary"
             >
               Contact Us
             </Link>
@@ -157,22 +157,22 @@ export default function Home() {
       <div className="spectrum-line" />
 
       {/* Portfolio Section */}
-      <section id="platforms" className="py-24 md:py-32 px-6">
+      <section id="platforms" className="py-28 md:py-36 px-6">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-4">
+            <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               Eight Platforms. Eight Missions.
             </h2>
-            <p className="text-white/40 text-center mb-16 text-lg">
+            <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {platforms.map((platform, i) => (
               <ScrollReveal key={platform.num} delay={i * 100}>
                 <div
-                  className="platform-card glass-panel p-6 h-full flex flex-col relative overflow-hidden group"
+                  className="platform-card glass-panel p-8 min-h-[320px] flex flex-col relative overflow-hidden group"
                   style={{
                     borderTop:
                       platform.color === 'spectrum'
@@ -184,21 +184,32 @@ export default function Home() {
                         : undefined,
                   }}
                 >
-                  {/* Hover glow */}
+                  {/* Hover glow — top border bloom */}
                   <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none"
                     style={{
+                      boxShadow:
+                        platform.color === 'spectrum'
+                          ? '0 -4px 20px rgba(139,92,246,0.3)'
+                          : `0 -4px 20px ${platform.color}55`,
                       background:
                         platform.color === 'spectrum'
-                          ? 'radial-gradient(ellipse at top, rgba(139,92,246,0.08), transparent 70%)'
-                          : `radial-gradient(ellipse at top, ${platform.color}11, transparent 70%)`,
+                          ? 'radial-gradient(ellipse at top, rgba(139,92,246,0.1), transparent 70%)'
+                          : `radial-gradient(ellipse at top, ${platform.color}15, transparent 70%)`,
                     }}
                   />
 
-                  <div className="relative z-10">
-                    <span className="text-white/20 text-xs font-mono">{platform.num}</span>
+                  {/* Large background number */}
+                  <span
+                    className="absolute top-4 right-4 text-4xl font-black opacity-[0.08] pointer-events-none"
+                    style={{ color: platform.color === 'spectrum' ? '#A78BFA' : platform.color }}
+                  >
+                    {platform.num}
+                  </span>
+
+                  <div className="relative z-10 flex flex-col h-full">
                     <h3
-                      className="text-xl font-black mt-2 tracking-wide"
+                      className="text-2xl font-bold tracking-wide"
                       style={{
                         color: platform.color === 'spectrum' ? undefined : platform.color,
                       }}
@@ -209,19 +220,19 @@ export default function Home() {
                         platform.name
                       )}
                     </h3>
-                    <p className="text-white/60 text-sm mt-1 italic">{platform.tagline}</p>
-                    <p className="text-white/40 text-sm mt-3 leading-relaxed flex-grow">
+                    <p className="text-sm italic text-white/50 mt-1">{platform.tagline}</p>
+                    <p className="text-sm text-white/70 mt-3 leading-relaxed flex-grow line-clamp-3">
                       {platform.description}
                     </p>
-                    <div className="mt-4 flex items-center justify-between">
-                      <span className="text-white/30 text-xs font-semibold tracking-wider uppercase">
+                    <div className="mt-5 flex items-center justify-between">
+                      <span className="bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs text-white/50 font-semibold tracking-wider uppercase">
                         {platform.stat}
                       </span>
                       <a
                         href={platform.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-medium hover:opacity-70 transition-opacity"
+                        className="text-sm font-semibold hover:underline transition-opacity"
                         style={{
                           color: platform.color === 'spectrum' ? '#A78BFA' : platform.color,
                         }}
@@ -237,8 +248,8 @@ export default function Home() {
 
           {/* Mission Line */}
           <ScrollReveal>
-            <div className="mt-20 max-w-4xl mx-auto text-center">
-              <p className="text-white/50 text-sm md:text-base leading-relaxed">
+            <div className="mt-24 max-w-[720px] mx-auto text-center">
+              <p className="text-white/60 text-sm md:text-base leading-[1.8]">
                 <span style={{ color: '#06B6D4' }}>EZRE</span> connects an industry.{' '}
                 <span style={{ color: '#3B82F6' }}>CLARITY</span> connects patients to understanding.{' '}
                 <span style={{ color: '#D4A843' }}>HARMONY</span> connects emotions to music.{' '}
@@ -257,10 +268,10 @@ export default function Home() {
       <div className="spectrum-line" />
 
       {/* Numbers Section */}
-      <section className="py-24 md:py-32 px-6">
+      <section className="py-28 md:py-36 px-6">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-20" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               The Numbers
             </h2>
           </ScrollReveal>
@@ -273,6 +284,7 @@ export default function Home() {
                   suffix={stat.suffix}
                   prefix={stat.prefix}
                   label={stat.label}
+                  labelColor={stat.color}
                 />
               </ScrollReveal>
             ))}
@@ -284,31 +296,35 @@ export default function Home() {
       <div className="spectrum-line" />
 
       {/* Thesis Section */}
-      <section className="py-24 md:py-32 px-6">
+      <section className="py-28 md:py-36 px-6">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-12">
+            <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-16" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               The Thesis
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
             <div className="glass-panel p-8 md:p-12">
-              <p className="text-white/70 text-lg leading-relaxed mb-6">
-                The next generation of technology companies won&apos;t be built by engineering teams
-                with venture capital.
-              </p>
-              <p className="text-white/70 text-lg leading-relaxed mb-6">
-                They&apos;ll be built by domain experts who understand problems deeply, working with
-                AI partners who can translate vision into code.
-              </p>
-              <p className="text-white text-xl font-bold mb-6">Vilmure Ventures is proof.</p>
-              <p className="text-white/70 text-lg leading-relaxed mb-6">
-                One person. One AI. Eight platforms. Seven months. Zero funding.
-              </p>
-              <p className="text-white/50 text-lg leading-relaxed">
-                This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
-              </p>
+              <div className="max-w-[720px] mx-auto">
+                <p className="text-white/80 text-lg leading-[1.8] mb-8">
+                  The next generation of technology companies won&apos;t be built by engineering teams
+                  with venture capital.
+                </p>
+                <p className="text-white/80 text-lg leading-[1.8] mb-8">
+                  They&apos;ll be built by domain experts who understand problems deeply, working with
+                  AI partners who can translate vision into code.
+                </p>
+                <p className="text-2xl mb-8">
+                  Vilmure Ventures is <span className="spectrum-bold">proof.</span>
+                </p>
+                <p className="text-white/80 text-lg leading-[1.8] mb-8">
+                  One person. One AI. Eight platforms. Seven months. Zero funding.
+                </p>
+                <p className="text-white/60 text-lg leading-[1.8]">
+                  This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
+                </p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -318,18 +334,18 @@ export default function Home() {
       <div className="spectrum-line" />
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 px-6 text-center">
+      <section className="py-28 md:py-36 px-6 text-center">
         <ScrollReveal>
-          <p className="text-white/60 text-xl md:text-2xl font-light max-w-xl mx-auto mb-8">
+          <p className="text-white/70 text-xl md:text-2xl font-light max-w-xl mx-auto mb-10 leading-[1.8]">
             Interested in our platforms? Want to partner? Let&apos;s talk.
           </p>
           <Link
             href="/contact"
-            className="inline-block px-10 py-4 bg-white text-[#080810] font-bold rounded-full hover:bg-white/90 transition-all text-sm tracking-wide"
+            className="btn-cta inline-block"
           >
             Contact Josh Vilmure
           </Link>
-          <p className="mt-4 text-white/30 text-sm">josh@myezre.ai</p>
+          <p className="mt-6 text-white/30 text-sm">josh@myezre.ai</p>
         </ScrollReveal>
       </section>
     </>

@@ -7,6 +7,7 @@ interface AnimatedCounterProps {
   suffix?: string;
   prefix?: string;
   label: string;
+  labelColor?: string;
   duration?: number;
 }
 
@@ -15,6 +16,7 @@ export default function AnimatedCounter({
   suffix = '',
   prefix = '',
   label,
+  labelColor,
   duration = 2000,
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
@@ -54,7 +56,10 @@ export default function AnimatedCounter({
         {count.toLocaleString()}
         {suffix}
       </div>
-      <div className="mt-2 text-white/40 text-sm font-medium tracking-wide uppercase">
+      <div
+        className="mt-2 text-sm font-medium tracking-wide uppercase"
+        style={{ color: labelColor || 'rgba(255,255,255,0.4)' }}
+      >
         {label}
       </div>
     </div>

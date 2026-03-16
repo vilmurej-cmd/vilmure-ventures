@@ -26,6 +26,8 @@ const storyAngles = [
   },
 ];
 
+const spectrumColors = ['#06B6D4', '#3B82F6', '#8B5CF6', '#D4A843', '#E11D48'];
+
 const keyFacts = [
   { label: 'Founder', value: 'Josh Vilmure, Stevensville, Michigan' },
   { label: 'Company', value: 'Vilmure Ventures (parent) / EZRE LLC (flagship)' },
@@ -43,8 +45,8 @@ export default function PressPage() {
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 text-center">
         <ScrollReveal>
-          <h1 className="text-5xl md:text-7xl font-black tracking-wide">Press & Media</h1>
-          <p className="mt-6 text-white/50 text-lg md:text-xl max-w-2xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Press & Media</h1>
+          <p className="mt-6 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
             Resources for journalists, analysts, and industry observers
           </p>
         </ScrollReveal>
@@ -53,27 +55,32 @@ export default function PressPage() {
       <div className="spectrum-line" />
 
       {/* Story Angles */}
-      <section className="py-24 px-6">
+      <section className="py-28 px-6">
         <div className="max-w-4xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-black tracking-wide text-center mb-4">
+            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               The Story Angles
             </h2>
-            <p className="text-white/40 text-center mb-16">Suggested for media</p>
+            <p className="text-white/50 text-center mb-20">Suggested for media</p>
           </ScrollReveal>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             {storyAngles.map((angle, i) => (
               <ScrollReveal key={angle.title} delay={i * 100}>
-                <div className="glass-panel p-6 flex items-start gap-4">
-                  <span className="text-white/20 font-mono text-sm mt-0.5 shrink-0">
+                <div className="glass-panel p-8 relative overflow-hidden">
+                  {/* Large background number */}
+                  <span
+                    className="absolute top-4 right-6 text-5xl font-black opacity-[0.08] pointer-events-none"
+                    style={{ color: spectrumColors[i] }}
+                  >
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <div>
-                    <h3 className="text-white font-bold text-lg">
+
+                  <div className="relative z-10">
+                    <h3 className="text-white font-bold text-xl mb-2">
                       &ldquo;{angle.title}&rdquo;
                     </h3>
-                    <p className="text-white/50 mt-1">{angle.description}</p>
+                    <p className="text-white/60 leading-[1.8]">{angle.description}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -85,26 +92,26 @@ export default function PressPage() {
       <div className="spectrum-line" />
 
       {/* Key Facts */}
-      <section className="py-24 px-6">
+      <section className="py-28 px-6">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-black tracking-wide text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-20" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               Key Facts
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
             <div className="glass-panel p-8">
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {keyFacts.map((fact) => (
                   <div
                     key={fact.label}
-                    className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 py-2 border-b border-white/[0.04] last:border-0"
+                    className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 py-3 border-b border-white/[0.04] last:border-0"
                   >
                     <span className="text-white/30 text-sm font-semibold tracking-wider uppercase w-36 shrink-0">
                       {fact.label}
                     </span>
-                    <span className="text-white/70">{fact.value}</span>
+                    <span className="text-white/80">{fact.value}</span>
                   </div>
                 ))}
               </div>
@@ -116,19 +123,19 @@ export default function PressPage() {
       <div className="spectrum-line" />
 
       {/* Brand Assets */}
-      <section className="py-24 px-6">
+      <section className="py-28 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-black tracking-wide mb-8">Brand Assets</h2>
+            <h2 className="text-3xl md:text-5xl font-black tracking-wide mb-10" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Brand Assets</h2>
             <div className="glass-panel p-12">
               <div className="text-4xl font-black tracking-[0.25em] uppercase text-white mb-2">
                 VILMURE VENTURES
               </div>
               <div className="spectrum-line my-6" />
-              <p className="text-white/30 text-sm">
+              <p className="text-white/40 text-sm">
                 Logo and brand assets available upon request.
               </p>
-              <p className="text-white/30 text-sm mt-2">
+              <p className="text-white/40 text-sm mt-2">
                 Platform screenshots available at each platform&apos;s URL.
               </p>
             </div>
@@ -139,16 +146,16 @@ export default function PressPage() {
       <div className="spectrum-line" />
 
       {/* Media Contact */}
-      <section className="py-24 px-6 text-center">
+      <section className="py-28 px-6 text-center">
         <ScrollReveal>
-          <h2 className="text-2xl md:text-3xl font-black tracking-wide mb-8">Media Contact</h2>
+          <h2 className="text-2xl md:text-4xl font-black tracking-wide mb-10" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Media Contact</h2>
           <a
             href="mailto:josh@myezre.ai"
             className="text-white text-lg hover:text-white/70 transition-colors"
           >
             josh@myezre.ai
           </a>
-          <p className="text-white/40 text-sm mt-4">
+          <p className="text-white/50 text-sm mt-4">
             For interviews, demos, or additional information
           </p>
         </ScrollReveal>

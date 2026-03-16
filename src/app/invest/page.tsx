@@ -35,8 +35,8 @@ export default function InvestPage() {
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 text-center">
         <ScrollReveal>
-          <h1 className="text-5xl md:text-7xl font-black tracking-wide">Partner With Us</h1>
-          <p className="mt-6 text-white/50 text-lg md:text-xl max-w-2xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>Partner With Us</h1>
+          <p className="mt-6 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
             Vilmure Ventures is exploring strategic partnerships, investments, and acquisition
             opportunities
           </p>
@@ -46,15 +46,15 @@ export default function InvestPage() {
       <div className="spectrum-line" />
 
       {/* What We Offer */}
-      <section className="py-24 px-6">
+      <section className="py-28 px-6">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-black tracking-wide text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-20" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               What We Offer
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {offerings.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 150}>
                 <div
@@ -64,7 +64,7 @@ export default function InvestPage() {
                   <h3 className="text-xl font-bold mb-4" style={{ color: item.color }}>
                     {item.title}
                   </h3>
-                  <p className="text-white/50 leading-relaxed">{item.description}</p>
+                  <p className="text-white/60 leading-[1.8]">{item.description}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -75,21 +75,21 @@ export default function InvestPage() {
       <div className="spectrum-line" />
 
       {/* Deal Structure */}
-      <section className="py-24 px-6">
+      <section className="py-28 px-6">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-black tracking-wide text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-16" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               Deal Structure Flexibility
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={200}>
             <div className="glass-panel p-8">
-              <div className="space-y-4">
+              <div className="space-y-5">
                 {structures.map((item, i) => (
                   <div key={i} className="flex items-center gap-4">
                     <div className="w-1.5 h-1.5 rounded-full bg-white/30" />
-                    <p className="text-white/60 text-lg">{item}</p>
+                    <p className="text-white/70 text-lg">{item}</p>
                   </div>
                 ))}
               </div>
@@ -101,18 +101,18 @@ export default function InvestPage() {
       <div className="spectrum-line" />
 
       {/* Why Now */}
-      <section className="py-24 px-6">
+      <section className="py-28 px-6">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-black tracking-wide text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-black tracking-wide text-center mb-16" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
               Why Now
             </h2>
           </ScrollReveal>
 
-          <div className="space-y-6">
+          <div className="space-y-8">
             <ScrollReveal delay={100}>
-              <div className="glass-panel p-6">
-                <p className="text-white/60 text-lg leading-relaxed">
+              <div className="glass-panel p-8">
+                <p className="text-white/70 text-lg leading-[1.8]">
                   The real estate industry is consolidating. Compass just acquired Anywhere. KW just
                   brought in Stone Point Capital. The companies that own the best technology will win.
                 </p>
@@ -120,8 +120,8 @@ export default function InvestPage() {
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <div className="glass-panel p-6">
-                <p className="text-white/60 text-lg leading-relaxed">
+              <div className="glass-panel p-8">
+                <p className="text-white/70 text-lg leading-[1.8]">
                   EZRE OS is the only platform built from the closing table — by someone who
                   processed title commitments, ran CMAs, and sat across from nervous first-time
                   buyers.
@@ -130,8 +130,8 @@ export default function InvestPage() {
             </ScrollReveal>
 
             <ScrollReveal delay={300}>
-              <div className="glass-panel p-6">
-                <p className="text-white text-lg leading-relaxed font-semibold">
+              <div className="bg-white/5 border-l-4 rounded-r-xl p-8" style={{ borderLeftColor: '#8B5CF6' }}>
+                <p className="text-white text-lg leading-[1.8] font-medium">
                   The window for acquiring a fully-built, zero-cap-table, zero-debt,
                   white-label-ready OS is now.
                 </p>
@@ -144,9 +144,9 @@ export default function InvestPage() {
       <div className="spectrum-line" />
 
       {/* Contact */}
-      <section className="py-24 px-6 text-center">
+      <section className="py-28 px-6 text-center">
         <ScrollReveal>
-          <h2 className="text-2xl md:text-3xl font-black tracking-wide mb-8">
+          <h2 className="text-2xl md:text-4xl font-black tracking-wide mb-10" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
             For acquisition or investment inquiries
           </h2>
           <div className="glass-panel inline-block p-8 md:p-12">
@@ -162,7 +162,10 @@ export default function InvestPage() {
             >
               269-487-4847
             </a>
-            <p className="text-white/30 text-sm mt-6">All inquiries are confidential.</p>
+            <div className="mt-8 inline-flex items-center gap-2 border border-white/10 rounded-full px-5 py-2">
+              <div className="w-2 h-2 rounded-full bg-white/20" />
+              <span className="text-white/40 text-sm tracking-wide">All inquiries are confidential</span>
+            </div>
           </div>
         </ScrollReveal>
       </section>

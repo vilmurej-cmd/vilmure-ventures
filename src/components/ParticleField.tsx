@@ -36,12 +36,12 @@ export default function ParticleField() {
     };
 
     const createParticles = () => {
-      const count = Math.min(60, Math.floor((canvas.width * canvas.height) / 20000));
+      const count = Math.min(35, Math.floor((canvas.width * canvas.height) / 40000));
       particles = Array.from({ length: count }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
+        vx: (Math.random() - 0.5) * 0.15,
+        vy: (Math.random() - 0.5) * 0.15,
         size: Math.random() * 2 + 0.5,
         colorIndex: Math.floor(Math.random() * SPECTRUM_COLORS.length),
         alpha: Math.random() * 0.3 + 0.05,
