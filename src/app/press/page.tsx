@@ -2,9 +2,9 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 const storyAngles = [
   {
-    title: 'One Person, One AI, Eight Platforms',
+    title: 'One Person, One AI, Nine Platforms',
     description:
-      'The headline story of building 83,000+ lines of production code with zero VC and no engineering team.',
+      'The headline story of building 90,000+ lines of production code with zero VC and no engineering team.',
   },
   {
     title: 'Co-Founded by a Human and an AI',
@@ -32,11 +32,11 @@ const keyFacts = [
   { label: 'Founder', value: 'Josh Vilmure, Stevensville, Michigan' },
   { label: 'Company', value: 'Vilmure Ventures (parent) / EZRE LLC (flagship)' },
   { label: 'AI Partner', value: "Anthropic's Claude" },
-  { label: 'Platforms', value: '8 live' },
-  { label: 'Total Code', value: '83,000+ lines' },
+  { label: 'Platforms', value: '9 live' },
+  { label: 'Total Code', value: '90,000+ lines' },
   { label: 'Funding', value: '$0 VC' },
   { label: 'Build Time', value: '7 months (September 2025 — March 2026)' },
-  { label: 'Build Sessions', value: '120' },
+  { label: 'Build Sessions', value: '122' },
 ];
 
 export default function PressPage() {

@@ -84,15 +84,25 @@ const platforms = [
     color: '#A78BFA',
     url: '#',
   },
+  {
+    num: '09',
+    name: 'SPARK',
+    tagline: 'Empowering the bravest kids in the world',
+    description:
+      'The world\'s first children\'s health empowerment platform. When a child is diagnosed with any condition, SPARK makes them the HERO — not the patient. Features 12 explorable lands, a PixiJS game engine, 14 original compositions, and Ember the Fox.',
+    stat: '14 Compositions',
+    color: '#F59E0B',
+    url: 'https://spark-platform-alpha.vercel.app',
+  },
 ];
 
 const stats = [
-  { end: 8, suffix: '', label: 'Platforms', color: '#06B6D4' },
-  { end: 83000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
+  { end: 9, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
   { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
   { end: 75, suffix: '+', label: 'Languages', color: '#E11D48' },
-  { end: 120, suffix: '', label: 'Build Sessions', color: '#00E5FF' },
+  { end: 122, suffix: '', label: 'Build Sessions', color: '#00E5FF' },
   { end: 0, prefix: '$', suffix: '', label: 'VC Raised', color: '#A78BFA' },
   { end: 7, suffix: '', label: 'Months', color: '#00FF94' },
 ];
@@ -114,13 +124,13 @@ export default function Home() {
 
         <ScrollReveal delay={400}>
           <p className="mt-8 text-xl md:text-2xl text-white/80 font-light max-w-2xl leading-relaxed">
-            Connect the Disconnected. Protect the Unprotected.
+            Connect the Disconnected. Protect the Unprotected. Empower the Brave.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            8 platforms. 83,000+ lines of code. 75+ languages. Zero venture capital.
+            9 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -161,7 +171,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Eight Platforms. Eight Missions.
+              Nine Platforms. Nine Missions.
             </h2>
             <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
@@ -257,7 +267,8 @@ export default function Home() {
                 <span className="spectrum-text">LINGUA</span> connects humans to each other.{' '}
                 <span style={{ color: '#E11D48' }}>TRUTH</span> connects all knowledge to everyone.{' '}
                 <span style={{ color: '#00E5FF' }}>GENESIS</span> connects humanity to the cure.{' '}
-                <span style={{ color: '#A78BFA' }}>HAVEN</span> protects those who need it most.
+                <span style={{ color: '#A78BFA' }}>HAVEN</span> protects those who need it most.{' '}
+                <span style={{ color: '#F59E0B' }}>SPARK</span> empowers the bravest kids in the world.
               </p>
             </div>
           </ScrollReveal>
@@ -319,7 +330,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Eight platforms. Seven months. Zero funding.
+                  One person. One AI. Nine platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.

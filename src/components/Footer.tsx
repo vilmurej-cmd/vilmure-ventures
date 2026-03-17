@@ -25,7 +25,8 @@ export default function Footer() {
             </Link>
             <p className="mt-4 text-white/40 text-sm leading-relaxed">
               Connect the Disconnected.<br />
-              Protect the Unprotected.
+              Protect the Unprotected.<br />
+              Empower the Brave.
             </p>
           </div>
 
