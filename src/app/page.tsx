@@ -104,10 +104,50 @@ const platforms = [
     color: '#F59E0B',
     url: 'https://command-platform-nine.vercel.app',
   },
+  {
+    num: '11',
+    name: 'AM I COOKED?',
+    tagline: 'AI Life Roast',
+    description:
+      'Upload your resume, dating profile, or social media and let AI roast your life choices with brutal honesty and comedic timing. The truth hurts — but at least it\'s funny.',
+    stat: 'Brutal Honesty',
+    color: '#FF6B35',
+    url: 'https://github.com/vilmurej-cmd/amicooked',
+  },
+  {
+    num: '12',
+    name: 'GHOST WRITER',
+    tagline: 'AI Text Message Assistant',
+    description:
+      'Never send a bad text again. GHOST WRITER crafts the perfect response for any conversation — dating, networking, awkward situations, or that text you\'ve been staring at for 20 minutes.',
+    stat: 'Perfect Replies',
+    color: '#8B5CF6',
+    url: 'https://github.com/vilmurej-cmd/ghostwriter',
+  },
+  {
+    num: '13',
+    name: 'VIBE CHECK',
+    tagline: 'AI Aura & Energy Reader',
+    description:
+      'Upload a selfie and let AI read your aura, energy, and vibe. Get a personalized energy report, color analysis, and cosmic insights that are equal parts fun and eerily accurate.',
+    stat: 'Aura Reading',
+    color: '#06B6D4',
+    url: 'https://github.com/vilmurej-cmd/vibecheck',
+  },
+  {
+    num: '14',
+    name: 'HYPE ME UP',
+    tagline: 'AI Confidence Booster',
+    description:
+      'When you need a pick-me-up, HYPE ME UP delivers personalized motivational fire. Tell it what you\'re going through and get the world\'s most aggressive encouragement.',
+    stat: 'Pure Motivation',
+    color: '#FFD700',
+    url: 'https://github.com/vilmurej-cmd/hypemeup',
+  },
 ];
 
 const stats = [
-  { end: 10, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 14, suffix: '', label: 'Platforms', color: '#06B6D4' },
   { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
   { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
@@ -140,7 +180,7 @@ export default function Home() {
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            10 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
+            14 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -181,7 +221,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Ten Platforms. Ten Missions.
+              Fourteen Platforms. Fourteen Missions.
             </h2>
             <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
@@ -279,7 +319,11 @@ export default function Home() {
                 <span style={{ color: '#00E5FF' }}>GENESIS</span> connects humanity to the cure.{' '}
                 <span style={{ color: '#A78BFA' }}>HAVEN</span> protects those who need it most.{' '}
                 <span style={{ color: '#F59E0B' }}>SPARK</span> empowers the bravest kids in the world.{' '}
-                <span style={{ color: '#F59E0B' }}>COMMAND</span> organizes the overwhelmed.
+                <span style={{ color: '#F59E0B' }}>COMMAND</span> organizes the overwhelmed.{' '}
+                <span style={{ color: '#FF6B35' }}>AM I COOKED?</span> roasts you with love.{' '}
+                <span style={{ color: '#8B5CF6' }}>GHOST WRITER</span> crafts the perfect message.{' '}
+                <span style={{ color: '#06B6D4' }}>VIBE CHECK</span> reads your energy.{' '}
+                <span style={{ color: '#FFD700' }}>HYPE ME UP</span> fuels your confidence.
               </p>
             </div>
           </ScrollReveal>
@@ -341,7 +385,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Ten platforms. Seven months. Zero funding.
+                  One person. One AI. Fourteen platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
