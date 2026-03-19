@@ -424,10 +424,70 @@ const platforms = [
     color: '#7C3AED',
     url: 'https://github.com/vilmurej-cmd/safecircle',
   },
+  {
+    num: '43',
+    name: 'SIMPLE PHONE',
+    tagline: 'AI Phone Simplifier',
+    description:
+      'An AI-powered phone interface designed for seniors — simplifying calls, texts, and apps into a clean, large-text experience that makes technology accessible to everyone.',
+    stat: 'Phone AI',
+    color: '#3B82F6',
+    url: 'https://github.com/vilmurej-cmd/simplephone',
+  },
+  {
+    num: '44',
+    name: 'DEAR FAMILY',
+    tagline: 'Family Connection Hub',
+    description:
+      'A family connection platform that keeps seniors linked with loved ones through shared photos, video calls, and updates — all in one simple, beautiful interface.',
+    stat: 'Family Hub',
+    color: '#F97316',
+    url: 'https://github.com/vilmurej-cmd/dearfamily',
+  },
+  {
+    num: '45',
+    name: 'MY HEALTH',
+    tagline: 'Health Companion',
+    description:
+      'A senior health companion that tracks medications, appointments, and vitals with gentle reminders and clear summaries — keeping health simple and stress-free.',
+    stat: 'Health Tracking',
+    color: '#EF4444',
+    url: 'https://github.com/vilmurej-cmd/myhealthapp',
+  },
+  {
+    num: '46',
+    name: 'REMEMBER',
+    tagline: 'Brain Games',
+    description:
+      'AI-powered brain games and memory exercises designed for seniors — keeping minds sharp with fun, adaptive challenges that grow with you.',
+    stat: 'Brain Training',
+    color: '#8B5CF6',
+    url: 'https://github.com/vilmurej-cmd/rememberapp',
+  },
+  {
+    num: '47',
+    name: 'HELP ME',
+    tagline: 'AI Tech Support',
+    description:
+      'Instant, patient AI tech support for seniors. Ask any question about your phone, computer, or device and get clear, step-by-step help — no jargon, no judgment.',
+    stat: 'Tech Help',
+    color: '#F97316',
+    url: 'https://github.com/vilmurej-cmd/helpmeapp',
+  },
+  {
+    num: '48',
+    name: 'LIFE STORIES',
+    tagline: 'AI Memoir Builder',
+    description:
+      'An AI-powered memoir builder that helps seniors capture and preserve their life stories through guided conversations, turning memories into beautiful, shareable narratives.',
+    stat: 'Memoir AI',
+    color: '#B8860B',
+    url: 'https://github.com/vilmurej-cmd/lifestories',
+  },
 ];
 
 const stats = [
-  { end: 42, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 48, suffix: '', label: 'Platforms', color: '#06B6D4' },
   { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
   { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
@@ -460,7 +520,7 @@ export default function Home() {
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            42 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
+            48 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -501,7 +561,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Forty-Two Platforms. Forty-Two Missions.
+              Forty-Eight Platforms. Forty-Eight Missions.
             </h2>
             <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
@@ -631,7 +691,13 @@ export default function Home() {
                 <span style={{ color: '#8B5CF6' }}>REAL TALK</span> checks in on teens.{' '}
                 <span style={{ color: '#EC4899' }}>GLOW UP</span> builds confidence.{' '}
                 <span style={{ color: '#10B981' }}>FIRST JOB</span> launches careers.{' '}
-                <span style={{ color: '#7C3AED' }}>SAFE CIRCLE</span> protects friend groups.
+                <span style={{ color: '#7C3AED' }}>SAFE CIRCLE</span> protects friend groups.{' '}
+                <span style={{ color: '#3B82F6' }}>SIMPLE PHONE</span> simplifies technology.{' '}
+                <span style={{ color: '#F97316' }}>DEAR FAMILY</span> connects families.{' '}
+                <span style={{ color: '#EF4444' }}>MY HEALTH</span> tracks wellness.{' '}
+                <span style={{ color: '#8B5CF6' }}>REMEMBER</span> sharpens minds.{' '}
+                <span style={{ color: '#F97316' }}>HELP ME</span> provides tech support.{' '}
+                <span style={{ color: '#B8860B' }}>LIFE STORIES</span> preserves memories.
               </p>
             </div>
           </ScrollReveal>
@@ -693,7 +759,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Forty-two platforms. Seven months. Zero funding.
+                  One person. One AI. Forty-eight platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
