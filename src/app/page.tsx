@@ -364,10 +364,70 @@ const platforms = [
     color: '#F59E0B',
     url: 'https://github.com/vilmurej-cmd/abcworld',
   },
+  {
+    num: '37',
+    name: 'SHIELD',
+    tagline: 'Anti-Cyberbullying',
+    description:
+      'An AI-powered platform that detects, prevents, and responds to cyberbullying in real time — protecting teens across social media, messaging, and gaming.',
+    stat: 'Teen Safety',
+    color: '#3B82F6',
+    url: 'https://github.com/vilmurej-cmd/shieldapp',
+  },
+  {
+    num: '38',
+    name: 'STUDY BUDDY',
+    tagline: 'AI Homework Tutor',
+    description:
+      'An AI tutor that helps teens understand homework — not just get answers. Step-by-step explanations, concept breakdowns, and study strategies tailored to how they learn.',
+    stat: 'AI Tutoring',
+    color: '#3B82F6',
+    url: 'https://github.com/vilmurej-cmd/studybuddy',
+  },
+  {
+    num: '39',
+    name: 'REAL TALK',
+    tagline: 'Teen Check-In',
+    description:
+      'A safe, private space for teens to check in with their mental health. AI-guided journaling, mood tracking, and coping tools designed for the pressures of growing up.',
+    stat: 'Mental Health',
+    color: '#8B5CF6',
+    url: 'https://github.com/vilmurej-cmd/realtalk',
+  },
+  {
+    num: '40',
+    name: 'GLOW UP',
+    tagline: 'AI Confidence Builder',
+    description:
+      'An AI-powered confidence and self-esteem platform for teens. Daily affirmations, goal tracking, and personalized growth challenges that help teens become their best selves.',
+    stat: 'Confidence AI',
+    color: '#EC4899',
+    url: 'https://github.com/vilmurej-cmd/glowup',
+  },
+  {
+    num: '41',
+    name: 'FIRST JOB',
+    tagline: 'Career & Money Starter',
+    description:
+      'Everything a teen needs to land their first job and manage their first paycheck. Resume builder, interview prep, budgeting basics, and financial literacy — all in one app.',
+    stat: 'Career Starter',
+    color: '#10B981',
+    url: 'https://github.com/vilmurej-cmd/firstjob',
+  },
+  {
+    num: '42',
+    name: 'SAFE CIRCLE',
+    tagline: 'Private Friend Group',
+    description:
+      'A private, parent-aware social platform where teens connect with their real friend group. No strangers, no algorithms, no toxicity — just the people who matter most.',
+    stat: 'Private Social',
+    color: '#7C3AED',
+    url: 'https://github.com/vilmurej-cmd/safecircle',
+  },
 ];
 
 const stats = [
-  { end: 36, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 42, suffix: '', label: 'Platforms', color: '#06B6D4' },
   { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
   { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
@@ -400,7 +460,7 @@ export default function Home() {
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            36 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
+            42 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -441,7 +501,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Thirty-Six Platforms. Thirty-Six Missions.
+              Forty-Two Platforms. Forty-Two Missions.
             </h2>
             <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
@@ -565,7 +625,13 @@ export default function Home() {
                 <span style={{ color: '#F97316' }}>TINY CHEF</span> teaches kids to cook.{' '}
                 <span style={{ color: '#8B5CF6' }}>QUEST</span> makes learning an adventure.{' '}
                 <span style={{ color: '#7C3AED' }}>FEELINGS FRIENDS</span> builds emotional intelligence.{' '}
-                <span style={{ color: '#F59E0B' }}>ABC WORLD</span> unlocks phonics.
+                <span style={{ color: '#F59E0B' }}>ABC WORLD</span> unlocks phonics.{' '}
+                <span style={{ color: '#3B82F6' }}>SHIELD</span> fights cyberbullying.{' '}
+                <span style={{ color: '#3B82F6' }}>STUDY BUDDY</span> tutors with patience.{' '}
+                <span style={{ color: '#8B5CF6' }}>REAL TALK</span> checks in on teens.{' '}
+                <span style={{ color: '#EC4899' }}>GLOW UP</span> builds confidence.{' '}
+                <span style={{ color: '#10B981' }}>FIRST JOB</span> launches careers.{' '}
+                <span style={{ color: '#7C3AED' }}>SAFE CIRCLE</span> protects friend groups.
               </p>
             </div>
           </ScrollReveal>
@@ -627,7 +693,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Thirty-six platforms. Seven months. Zero funding.
+                  One person. One AI. Forty-two platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
