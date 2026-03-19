@@ -26,13 +26,13 @@ const services = [
   {
     title: 'Training',
     description:
-      'Teach teams how to work with AI effectively — not as a tool to query, but as a partner to collaborate with. The same approach that built 17 platforms.',
+      'Teach teams how to work with AI effectively — not as a tool to query, but as a partner to collaborate with. The same approach that built 24 platforms.',
     Icon: GraduationCap,
   },
 ];
 
 const reasons = [
-  'We didn\'t just read about AI-assisted development. We built 17 platforms with it.',
+  'We didn\'t just read about AI-assisted development. We built 24 platforms with it.',
   'We don\'t just understand real estate technology. We built the most comprehensive real estate OS in the industry.',
   'We don\'t just consult. We build.',
 ];

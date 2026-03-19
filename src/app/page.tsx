@@ -174,10 +174,80 @@ const platforms = [
     color: '#F97316',
     url: 'https://github.com/vilmurej-cmd/dinnertonight',
   },
+  {
+    num: '18',
+    name: 'RATE MY FIT',
+    tagline: 'AI Fashion Critic',
+    description:
+      'Upload your outfit and let AI judge your style with brutal honesty and actionable advice. Get rated, roasted, and restyled — all in seconds.',
+    stat: 'Style Ratings',
+    color: '#EC4899',
+    url: 'https://github.com/vilmurej-cmd/ratemyfit',
+  },
+  {
+    num: '19',
+    name: 'DREAM DECODER',
+    tagline: 'AI Dream Interpreter',
+    description:
+      'Describe your dream and let AI decode the symbols, emotions, and hidden meanings. Wake up with answers instead of questions.',
+    stat: 'Dream Analysis',
+    color: '#4F46E5',
+    url: 'https://github.com/vilmurej-cmd/dreamdecoder',
+  },
+  {
+    num: '20',
+    name: 'WOULD THEY SAY THAT?',
+    tagline: 'AI Historical Advisor',
+    description:
+      'Ask history\'s greatest minds for advice on your modern problems. Get wisdom from Einstein, Cleopatra, or Marcus Aurelius — filtered through AI that stays true to their voice.',
+    stat: 'Historical Wisdom',
+    color: '#B8860B',
+    url: 'https://github.com/vilmurej-cmd/wouldtheysaythat',
+  },
+  {
+    num: '21',
+    name: 'ROAST MY RESUME',
+    tagline: 'AI Career Roast + Fix',
+    description:
+      'Upload your resume and get brutally honest AI feedback that tears it apart — then rebuilds it better. The roast you need before the job you want.',
+    stat: 'Career Fixes',
+    color: '#EF4444',
+    url: 'https://github.com/vilmurej-cmd/roastmyresume',
+  },
+  {
+    num: '22',
+    name: 'PEP TALK PET',
+    tagline: 'AI Emotional Support',
+    description:
+      'Your personal AI comfort companion that delivers warm, fuzzy encouragement whenever you need it. Like a supportive best friend who never sleeps.',
+    stat: 'Warm Fuzzies',
+    color: '#F59E0B',
+    url: 'https://github.com/vilmurej-cmd/peptalkpet',
+  },
+  {
+    num: '23',
+    name: 'SIDE HUSTLE FINDER',
+    tagline: 'AI Money Scanner',
+    description:
+      'Tell it your skills, schedule, and goals — and SIDE HUSTLE FINDER maps out personalized money-making opportunities you can start this week.',
+    stat: 'Hustle Plans',
+    color: '#10B981',
+    url: 'https://github.com/vilmurej-cmd/sidehustlefinder',
+  },
+  {
+    num: '24',
+    name: 'BABY NAMER',
+    tagline: 'AI Name Generator',
+    description:
+      'The smartest way to name your baby. AI analyzes meaning, origin, popularity trends, and sibling compatibility to generate the perfect name list.',
+    stat: 'Name Ideas',
+    color: '#EC4899',
+    url: 'https://github.com/vilmurej-cmd/babynamer',
+  },
 ];
 
 const stats = [
-  { end: 17, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 24, suffix: '', label: 'Platforms', color: '#06B6D4' },
   { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
   { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
@@ -210,7 +280,7 @@ export default function Home() {
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            17 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
+            24 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -251,7 +321,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Seventeen Platforms. Seventeen Missions.
+              Twenty-Four Platforms. Twenty-Four Missions.
             </h2>
             <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
@@ -356,7 +426,14 @@ export default function Home() {
                 <span style={{ color: '#FFD700' }}>HYPE ME UP</span> fuels your confidence.{' '}
                 <span style={{ color: '#10B981' }}>SPLIT</span> makes every bill fair.{' '}
                 <span style={{ color: '#3B82F6' }}>POCKET TRAINER</span> builds your perfect workout.{' '}
-                <span style={{ color: '#F97316' }}>DINNER TONIGHT</span> plans your next meal.
+                <span style={{ color: '#F97316' }}>DINNER TONIGHT</span> plans your next meal.{' '}
+                <span style={{ color: '#EC4899' }}>RATE MY FIT</span> judges your style.{' '}
+                <span style={{ color: '#4F46E5' }}>DREAM DECODER</span> interprets your dreams.{' '}
+                <span style={{ color: '#B8860B' }}>WOULD THEY SAY THAT?</span> channels historical wisdom.{' '}
+                <span style={{ color: '#EF4444' }}>ROAST MY RESUME</span> fixes your career.{' '}
+                <span style={{ color: '#F59E0B' }}>PEP TALK PET</span> comforts your soul.{' '}
+                <span style={{ color: '#10B981' }}>SIDE HUSTLE FINDER</span> finds your next dollar.{' '}
+                <span style={{ color: '#EC4899' }}>BABY NAMER</span> names your future.
               </p>
             </div>
           </ScrollReveal>
@@ -418,7 +495,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Seventeen platforms. Seven months. Zero funding.
+                  One person. One AI. Twenty-four platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
