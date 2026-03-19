@@ -102,7 +102,7 @@ const platforms = [
       'Every other scheduling tool optimizes for productivity. COMMAND optimizes for your life. Morning briefings, live co-pilot, evening debriefs, and a Life Balance Engine that makes sure work never steals the moments that matter most.',
     stat: 'Life Balance',
     color: '#F59E0B',
-    url: 'https://github.com/vilmurej-cmd/command-platform',
+    url: 'https://command-platform-nine.vercel.app',
   },
 ];
 
