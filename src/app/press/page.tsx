@@ -2,7 +2,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 const storyAngles = [
   {
-    title: 'One Person, One AI, Twenty-Four Platforms',
+    title: 'One Person, One AI, Thirty Platforms',
     description:
       'The headline story of building 90,000+ lines of production code with zero VC and no engineering team.',
   },

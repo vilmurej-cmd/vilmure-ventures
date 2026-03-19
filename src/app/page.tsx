@@ -244,10 +244,70 @@ const platforms = [
     color: '#EC4899',
     url: 'https://github.com/vilmurej-cmd/babynamer',
   },
+  {
+    num: '25',
+    name: 'VOICE VAULT',
+    tagline: 'AI Voice Organizer',
+    description:
+      'An AI-powered voice memo platform that records, transcribes, organizes, and resurfaces your spoken ideas — so no thought is ever lost again.',
+    stat: 'Voice AI',
+    color: '#FB923C',
+    url: 'https://github.com/vilmurej-cmd/voicevault',
+  },
+  {
+    num: '26',
+    name: 'RECEIPT BOSS',
+    tagline: 'AI Expense Tracker',
+    description:
+      'Snap a photo of any receipt and let AI categorize, track, and analyze your spending. Effortless expense management powered by computer vision.',
+    stat: 'Expense AI',
+    color: '#10B981',
+    url: 'https://github.com/vilmurej-cmd/receiptboss',
+  },
+  {
+    num: '27',
+    name: 'PARENT PILOT',
+    tagline: 'AI Parenting Assistant',
+    description:
+      'Your AI co-parent for the modern age. Get age-appropriate advice, milestone tracking, and answers to every parenting question at 3 AM.',
+    stat: 'Parenting AI',
+    color: '#60A5FA',
+    url: 'https://github.com/vilmurej-cmd/parentpilot',
+  },
+  {
+    num: '28',
+    name: 'LEAF',
+    tagline: 'AI Eco Coach',
+    description:
+      'Your personal sustainability coach that tracks your carbon footprint, suggests greener alternatives, and gamifies eco-friendly living.',
+    stat: 'Eco Insights',
+    color: '#059669',
+    url: 'https://github.com/vilmurej-cmd/leafapp',
+  },
+  {
+    num: '29',
+    name: 'NEIGHBOR',
+    tagline: 'Community Network',
+    description:
+      'A hyperlocal community platform that connects neighbors for sharing resources, coordinating events, and building stronger neighborhoods.',
+    stat: 'Local Network',
+    color: '#0D9488',
+    url: 'https://github.com/vilmurej-cmd/neighborapp',
+  },
+  {
+    num: '30',
+    name: 'SMART MONEY',
+    tagline: 'AI Financial Coach',
+    description:
+      'Your AI-powered financial advisor that analyzes spending, builds budgets, and delivers personalized money strategies — no expensive advisor required.',
+    stat: 'Money Coach',
+    color: '#22C55E',
+    url: 'https://github.com/vilmurej-cmd/smartmoney',
+  },
 ];
 
 const stats = [
-  { end: 24, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 30, suffix: '', label: 'Platforms', color: '#06B6D4' },
   { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
   { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
@@ -280,7 +340,7 @@ export default function Home() {
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            24 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
+            30 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -321,7 +381,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Twenty-Four Platforms. Twenty-Four Missions.
+              Thirty Platforms. Thirty Missions.
             </h2>
             <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
@@ -433,7 +493,13 @@ export default function Home() {
                 <span style={{ color: '#EF4444' }}>ROAST MY RESUME</span> fixes your career.{' '}
                 <span style={{ color: '#F59E0B' }}>PEP TALK PET</span> comforts your soul.{' '}
                 <span style={{ color: '#10B981' }}>SIDE HUSTLE FINDER</span> finds your next dollar.{' '}
-                <span style={{ color: '#EC4899' }}>BABY NAMER</span> names your future.
+                <span style={{ color: '#EC4899' }}>BABY NAMER</span> names your future.{' '}
+                <span style={{ color: '#FB923C' }}>VOICE VAULT</span> captures your thoughts.{' '}
+                <span style={{ color: '#10B981' }}>RECEIPT BOSS</span> tracks your spending.{' '}
+                <span style={{ color: '#60A5FA' }}>PARENT PILOT</span> guides your parenting.{' '}
+                <span style={{ color: '#059669' }}>LEAF</span> coaches your sustainability.{' '}
+                <span style={{ color: '#0D9488' }}>NEIGHBOR</span> connects your community.{' '}
+                <span style={{ color: '#22C55E' }}>SMART MONEY</span> masters your finances.
               </p>
             </div>
           </ScrollReveal>
@@ -495,7 +561,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Twenty-four platforms. Seven months. Zero funding.
+                  One person. One AI. Thirty platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
