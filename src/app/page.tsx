@@ -144,10 +144,40 @@ const platforms = [
     color: '#FFD700',
     url: 'https://github.com/vilmurej-cmd/hypemeup',
   },
+  {
+    num: '15',
+    name: 'SPLIT',
+    tagline: 'AI Bill Splitter',
+    description:
+      'The smartest way to split any bill. SPLIT uses AI to handle uneven splits, tax, tip, and shared items — so you never have to do the awkward math again.',
+    stat: 'Fair Splits',
+    color: '#10B981',
+    url: 'https://github.com/vilmurej-cmd/splitapp',
+  },
+  {
+    num: '16',
+    name: 'POCKET TRAINER',
+    tagline: 'AI Workout Generator',
+    description:
+      'Your personal AI fitness coach that builds custom workouts based on your goals, equipment, and time. No gym membership required — just tell it what you have and watch it work.',
+    stat: 'Custom Workouts',
+    color: '#3B82F6',
+    url: 'https://github.com/vilmurej-cmd/pockettrainer',
+  },
+  {
+    num: '17',
+    name: 'DINNER TONIGHT',
+    tagline: 'AI Meal Planner',
+    description:
+      'Tell it what\'s in your fridge and DINNER TONIGHT builds a complete meal plan with recipes, nutrition info, and grocery lists. AI-powered meal planning that actually understands your kitchen.',
+    stat: 'Meal Plans',
+    color: '#F97316',
+    url: 'https://github.com/vilmurej-cmd/dinnertonight',
+  },
 ];
 
 const stats = [
-  { end: 14, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 17, suffix: '', label: 'Platforms', color: '#06B6D4' },
   { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
   { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
@@ -180,7 +210,7 @@ export default function Home() {
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            14 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
+            17 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -221,7 +251,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Fourteen Platforms. Fourteen Missions.
+              Seventeen Platforms. Seventeen Missions.
             </h2>
             <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
@@ -323,7 +353,10 @@ export default function Home() {
                 <span style={{ color: '#FF6B35' }}>AM I COOKED?</span> roasts you with love.{' '}
                 <span style={{ color: '#8B5CF6' }}>GHOST WRITER</span> crafts the perfect message.{' '}
                 <span style={{ color: '#06B6D4' }}>VIBE CHECK</span> reads your energy.{' '}
-                <span style={{ color: '#FFD700' }}>HYPE ME UP</span> fuels your confidence.
+                <span style={{ color: '#FFD700' }}>HYPE ME UP</span> fuels your confidence.{' '}
+                <span style={{ color: '#10B981' }}>SPLIT</span> makes every bill fair.{' '}
+                <span style={{ color: '#3B82F6' }}>POCKET TRAINER</span> builds your perfect workout.{' '}
+                <span style={{ color: '#F97316' }}>DINNER TONIGHT</span> plans your next meal.
               </p>
             </div>
           </ScrollReveal>
@@ -385,7 +418,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Fourteen platforms. Seven months. Zero funding.
+                  One person. One AI. Seventeen platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.

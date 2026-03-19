@@ -2,7 +2,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 const storyAngles = [
   {
-    title: 'One Person, One AI, Fourteen Platforms',
+    title: 'One Person, One AI, Seventeen Platforms',
     description:
       'The headline story of building 90,000+ lines of production code with zero VC and no engineering team.',
   },
@@ -32,7 +32,7 @@ const keyFacts = [
   { label: 'Founder', value: 'Josh Vilmure, Stevensville, Michigan' },
   { label: 'Company', value: 'Vilmure Ventures (parent) / EZRE LLC (flagship)' },
   { label: 'AI Partner', value: "Anthropic's Claude" },
-  { label: 'Platforms', value: '14 live' },
+  { label: 'Platforms', value: '17 live' },
   { label: 'Total Code', value: '90,000+ lines' },
   { label: 'Funding', value: '$0 VC' },
   { label: 'Build Time', value: '7 months (September 2025 — March 2026)' },
