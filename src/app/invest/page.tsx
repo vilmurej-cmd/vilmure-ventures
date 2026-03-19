@@ -10,7 +10,7 @@ const offerings = [
   {
     title: 'The Full Portfolio',
     description:
-      '9 platforms spanning real estate, healthcare, music, language, discovery, medical science, safety, and children\'s health empowerment. 90,000+ lines of production code.',
+      '10 platforms spanning real estate, healthcare, music, language, discovery, medical science, safety, children\'s health empowerment, and life management. 90,000+ lines of production code.',
     color: '#8B5CF6',
   },
   {

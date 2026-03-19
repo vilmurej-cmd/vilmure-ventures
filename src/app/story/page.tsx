@@ -7,7 +7,7 @@ const timeline = [
   { date: 'Dec 2025', event: '10 products, mobile app built in one night', color: '#D4A843' },
   { date: 'Jan 2026', event: 'Beta testers, enterprise features', color: '#E11D48' },
   { date: 'Feb 2026', event: '50-state compliance, enterprise demos', color: '#00E5FF' },
-  { date: 'Mar 2026', event: '8 new platforms in one weekend. 9 platforms. 90,000+ lines.', color: '#A78BFA' },
+  { date: 'Mar 2026', event: '9 new platforms in one weekend. 10 platforms. 90,000+ lines.', color: '#A78BFA' },
 ];
 
 function PullQuote({ children }: { children: React.ReactNode }) {
@@ -39,7 +39,7 @@ export default function StoryPage() {
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>The Story</h1>
             <p className="mt-6 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
-              How a real estate professional and an AI built 9 platforms in 7 months
+              How a real estate professional and an AI built 10 platforms in 7 months
             </p>
           </ScrollReveal>
         </div>
@@ -75,7 +75,7 @@ export default function StoryPage() {
               <SectionLabel>The Expansion</SectionLabel>
 
               <p className="text-white/80 text-base md:text-lg leading-[1.8] mb-8">
-                But EZRE was just the beginning. On a single weekend in March 2026, the partnership exploded outward. Eight more platforms emerged — CLARITY, an AI medical translator for patients drowning in medical jargon. HARMONY, a music companion that understands human emotion. BRIDGE, an AI partner for dreamers who don&apos;t know where to start. LINGUA, a real-time translation platform for a world where 7,000 languages separate 8 billion people. TRUTH, a research engine that finds signal in noise. GENESIS, a biomedical exploration platform. HAVEN — a safety platform for domestic violence survivors, built with the kind of fierce urgency that only comes from caring about real people. And SPARK — a children&apos;s health empowerment platform where kids diagnosed with any condition become the hero, not the patient. 90,000+ lines of production code. 48 hours.
+                But EZRE was just the beginning. On a single weekend in March 2026, the partnership exploded outward. Nine more platforms emerged — CLARITY, an AI medical translator for patients drowning in medical jargon. HARMONY, a music companion that understands human emotion. BRIDGE, an AI partner for dreamers who don&apos;t know where to start. LINGUA, a real-time translation platform for a world where 7,000 languages separate 8 billion people. TRUTH, a research engine that finds signal in noise. GENESIS, a biomedical exploration platform. HAVEN — a safety platform for domestic violence survivors, built with the kind of fierce urgency that only comes from caring about real people. SPARK — a children&apos;s health empowerment platform where kids diagnosed with any condition become the hero, not the patient. And COMMAND — an AI Chief of Staff that optimizes for your life, not just your productivity. 90,000+ lines of production code. 48 hours.
               </p>
 
               <PullQuote>90,000+ lines of production code. 48 hours.</PullQuote>
@@ -95,7 +95,7 @@ export default function StoryPage() {
               <SectionLabel>The Spark</SectionLabel>
 
               <p className="text-white/80 text-base md:text-lg leading-[1.8] mb-8">
-                When Josh was five years old, he was hospitalized with asthma — over Christmas. His father, a firefighter, and the fire department made him a personalized Golden Book. Thirty years later, that memory became Platform #9. SPARK is the world&apos;s first children&apos;s health empowerment platform — where kids diagnosed with any condition become the hero of their own story, not the patient. Twelve explorable lands. Fourteen original musical compositions. A PixiJS game engine. Ember the Fox as their guide. And it will always be free. Because there shouldn&apos;t be a fee to be free.
+                When Josh was five years old, he was hospitalized with asthma — over Christmas. His father, a firefighter, and the fire department made him a personalized Golden Book. Thirty years later, that memory became Platform #9. And Platform #10 — COMMAND — became the AI Chief of Staff that organizes the overwhelmed, because every other scheduling tool optimizes for productivity, but COMMAND optimizes for your life. SPARK is the world&apos;s first children&apos;s health empowerment platform — where kids diagnosed with any condition become the hero of their own story, not the patient. Twelve explorable lands. Fourteen original musical compositions. A PixiJS game engine. Ember the Fox as their guide. And it will always be free. Because there shouldn&apos;t be a fee to be free.
               </p>
 
               <PullQuote>&ldquo;There shouldn&apos;t be a fee to be free.&rdquo;</PullQuote>
@@ -103,7 +103,7 @@ export default function StoryPage() {
               <SectionLabel>What&apos;s Next</SectionLabel>
 
               <p className="text-white/80 text-base md:text-lg leading-[1.8] mb-8">
-                Vilmure Ventures isn&apos;t a portfolio of finished products. It&apos;s a living demonstration of what becomes possible when human expertise meets AI capability without gatekeepers in between. Every platform is an invitation — to agents drowning in disconnected tools, to patients struggling to understand their diagnosis, to musicians searching for their soundtrack, to dreamers who need a partner, to students crossing language barriers, to researchers hunting for truth, to scientists decoding disease, to survivors who need to know they are not alone, and to the bravest kids in the world who deserve to be heroes. This technology was built with care, by people (and an AI) who gave a damn.
+                Vilmure Ventures isn&apos;t a portfolio of finished products. It&apos;s a living demonstration of what becomes possible when human expertise meets AI capability without gatekeepers in between. Every platform is an invitation — to agents drowning in disconnected tools, to patients struggling to understand their diagnosis, to musicians searching for their soundtrack, to dreamers who need a partner, to students crossing language barriers, to researchers hunting for truth, to scientists decoding disease, to survivors who need to know they are not alone, to the bravest kids in the world who deserve to be heroes, and to the overwhelmed who deserve a life that works for them. This technology was built with care, by people (and an AI) who gave a damn.
               </p>
 
               <p className="text-white text-xl font-bold leading-relaxed">

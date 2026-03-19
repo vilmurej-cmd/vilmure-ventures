@@ -94,10 +94,20 @@ const platforms = [
     color: '#F59E0B',
     url: 'https://spark-platform-alpha.vercel.app',
   },
+  {
+    num: '10',
+    name: 'COMMAND',
+    tagline: 'Your AI Chief of Staff',
+    description:
+      'Every other scheduling tool optimizes for productivity. COMMAND optimizes for your life. Morning briefings, live co-pilot, evening debriefs, and a Life Balance Engine that makes sure work never steals the moments that matter most.',
+    stat: 'Life Balance',
+    color: '#F59E0B',
+    url: 'https://github.com/vilmurej-cmd/command-platform',
+  },
 ];
 
 const stats = [
-  { end: 9, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 10, suffix: '', label: 'Platforms', color: '#06B6D4' },
   { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
   { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
@@ -124,13 +134,13 @@ export default function Home() {
 
         <ScrollReveal delay={400}>
           <p className="mt-8 text-xl md:text-2xl text-white/80 font-light max-w-2xl leading-relaxed">
-            Connect the Disconnected. Protect the Unprotected. Empower the Brave.
+            Connect the Disconnected. Protect the Unprotected. Empower the Brave. Organize the Overwhelmed.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            9 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
+            10 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -171,7 +181,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Nine Platforms. Nine Missions.
+              Ten Platforms. Ten Missions.
             </h2>
             <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
@@ -268,7 +278,8 @@ export default function Home() {
                 <span style={{ color: '#E11D48' }}>TRUTH</span> connects all knowledge to everyone.{' '}
                 <span style={{ color: '#00E5FF' }}>GENESIS</span> connects humanity to the cure.{' '}
                 <span style={{ color: '#A78BFA' }}>HAVEN</span> protects those who need it most.{' '}
-                <span style={{ color: '#F59E0B' }}>SPARK</span> empowers the bravest kids in the world.
+                <span style={{ color: '#F59E0B' }}>SPARK</span> empowers the bravest kids in the world.{' '}
+                <span style={{ color: '#F59E0B' }}>COMMAND</span> organizes the overwhelmed.
               </p>
             </div>
           </ScrollReveal>
@@ -330,7 +341,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Nine platforms. Seven months. Zero funding.
+                  One person. One AI. Ten platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
