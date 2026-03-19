@@ -304,10 +304,70 @@ const platforms = [
     color: '#22C55E',
     url: 'https://github.com/vilmurej-cmd/smartmoney',
   },
+  {
+    num: '31',
+    name: 'WONDER',
+    tagline: 'The One Kids App',
+    description:
+      'The ultimate kids app — a single, safe, AI-powered world where children explore, learn, create, and grow. One app to replace them all.',
+    stat: 'Kids Suite',
+    color: '#7C3AED',
+    url: 'https://github.com/vilmurej-cmd/wonderapp',
+  },
+  {
+    num: '32',
+    name: 'STORY SPARK',
+    tagline: 'AI Bedtime Stories',
+    description:
+      'AI-generated bedtime stories personalized for your child — starring them, their friends, and their favorite things. A new adventure every night.',
+    stat: 'Bedtime AI',
+    color: '#FBBF24',
+    url: 'https://github.com/vilmurej-cmd/storyspark',
+  },
+  {
+    num: '33',
+    name: 'TINY CHEF',
+    tagline: 'Kids Cooking Adventure',
+    description:
+      'A kid-friendly cooking app that turns mealtime into an adventure. Step-by-step recipes, safety tips, and fun challenges designed for little hands.',
+    stat: 'Kids Cooking',
+    color: '#F97316',
+    url: 'https://github.com/vilmurej-cmd/tinychef',
+  },
+  {
+    num: '34',
+    name: 'QUEST',
+    tagline: 'Daily Learning Adventure',
+    description:
+      'A daily learning adventure app for kids that turns education into an epic quest. New challenges, rewards, and discoveries every single day.',
+    stat: 'Daily Quests',
+    color: '#8B5CF6',
+    url: 'https://github.com/vilmurej-cmd/questapp',
+  },
+  {
+    num: '35',
+    name: 'FEELINGS FRIENDS',
+    tagline: 'Emotional Intelligence',
+    description:
+      'An AI-powered emotional intelligence app for kids. Helps children identify, understand, and express their feelings through friendly characters and guided activities.',
+    stat: 'EQ Builder',
+    color: '#7C3AED',
+    url: 'https://github.com/vilmurej-cmd/feelingsfriends',
+  },
+  {
+    num: '36',
+    name: 'ABC WORLD',
+    tagline: 'AI Phonics Adventure',
+    description:
+      'An AI-powered phonics and early reading app that adapts to each child\'s pace. Interactive letter worlds, sound games, and reading adventures.',
+    stat: 'Phonics AI',
+    color: '#F59E0B',
+    url: 'https://github.com/vilmurej-cmd/abcworld',
+  },
 ];
 
 const stats = [
-  { end: 30, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 36, suffix: '', label: 'Platforms', color: '#06B6D4' },
   { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
   { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
@@ -340,7 +400,7 @@ export default function Home() {
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            30 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
+            36 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -381,7 +441,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Thirty Platforms. Thirty Missions.
+              Thirty-Six Platforms. Thirty-Six Missions.
             </h2>
             <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
@@ -499,7 +559,13 @@ export default function Home() {
                 <span style={{ color: '#60A5FA' }}>PARENT PILOT</span> guides your parenting.{' '}
                 <span style={{ color: '#059669' }}>LEAF</span> coaches your sustainability.{' '}
                 <span style={{ color: '#0D9488' }}>NEIGHBOR</span> connects your community.{' '}
-                <span style={{ color: '#22C55E' }}>SMART MONEY</span> masters your finances.
+                <span style={{ color: '#22C55E' }}>SMART MONEY</span> masters your finances.{' '}
+                <span style={{ color: '#7C3AED' }}>WONDER</span> is the one kids app.{' '}
+                <span style={{ color: '#FBBF24' }}>STORY SPARK</span> tells bedtime stories.{' '}
+                <span style={{ color: '#F97316' }}>TINY CHEF</span> teaches kids to cook.{' '}
+                <span style={{ color: '#8B5CF6' }}>QUEST</span> makes learning an adventure.{' '}
+                <span style={{ color: '#7C3AED' }}>FEELINGS FRIENDS</span> builds emotional intelligence.{' '}
+                <span style={{ color: '#F59E0B' }}>ABC WORLD</span> unlocks phonics.
               </p>
             </div>
           </ScrollReveal>
@@ -561,7 +627,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Thirty platforms. Seven months. Zero funding.
+                  One person. One AI. Thirty-six platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
