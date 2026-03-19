@@ -8,9 +8,9 @@ import LoadingScreen from "@/components/LoadingScreen";
 import KonamiEasterEgg from "@/components/KonamiEasterEgg";
 
 export const metadata: Metadata = {
-  title: "Vilmure Ventures — Connect the Disconnected. Protect the Unprotected. Empower the Brave. Organize the Overwhelmed.",
+  title: "Vilmure Ventures — Connect the Disconnected. Protect the Unprotected. Empower the Brave. Organize the Overwhelmed. Include the Excluded.",
   description:
-    "48 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital. Built by a human and an AI.",
+    "55 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital. Built by a human and an AI.",
   keywords: [
     "Vilmure Ventures",
     "EZRE",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vilmure Ventures",
     description:
-      "48 platforms. 90,000+ lines of code. Zero venture capital. Built by a human and an AI.",
+      "55 platforms. 90,000+ lines of code. Zero venture capital. Built by a human and an AI.",
     type: "website",
   },
 };

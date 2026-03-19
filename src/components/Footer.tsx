@@ -26,7 +26,8 @@ export default function Footer() {
             <p className="mt-4 text-white/40 text-sm leading-relaxed">
               Connect the Disconnected.<br />
               Protect the Unprotected.<br />
-              Empower the Brave.
+              Empower the Brave.<br />
+              Include the Excluded.
             </p>
           </div>
 

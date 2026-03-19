@@ -7,7 +7,7 @@ const timeline = [
   { date: 'Dec 2025', event: '10 products, mobile app built in one night', color: '#D4A843' },
   { date: 'Jan 2026', event: 'Beta testers, enterprise features', color: '#E11D48' },
   { date: 'Feb 2026', event: '50-state compliance, enterprise demos', color: '#00E5FF' },
-  { date: 'Mar 2026', event: '13 new platforms in one weekend. 48 platforms. 90,000+ lines.', color: '#A78BFA' },
+  { date: 'Mar 2026', event: '13 new platforms in one weekend. 55 platforms. 90,000+ lines.', color: '#A78BFA' },
 ];
 
 function PullQuote({ children }: { children: React.ReactNode }) {
@@ -39,7 +39,7 @@ export default function StoryPage() {
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-black tracking-wide" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>The Story</h1>
             <p className="mt-6 text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-[1.8]">
-              How a real estate professional and an AI built 48 platforms in 7 months
+              How a real estate professional and an AI built 55 platforms in 7 months
             </p>
           </ScrollReveal>
         </div>

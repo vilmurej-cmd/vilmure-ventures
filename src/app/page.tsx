@@ -484,10 +484,80 @@ const platforms = [
     color: '#B8860B',
     url: 'https://github.com/vilmurej-cmd/lifestories',
   },
+  {
+    num: '49',
+    name: 'MY VOICE',
+    tagline: 'AI Communication',
+    description:
+      'An AI-powered communication assistant that gives a voice to those who struggle to speak — translating intent into clear, natural speech for people with speech disabilities.',
+    stat: 'Voice AI',
+    color: '#F59E0B',
+    url: 'https://github.com/vilmurej-cmd/myvoiceapp',
+  },
+  {
+    num: '50',
+    name: 'SOUND SEE',
+    tagline: 'AI Audio Describer',
+    description:
+      'An AI audio description platform that narrates the visual world for the blind and visually impaired — describing scenes, environments, and moments in real time.',
+    stat: 'Audio AI',
+    color: '#FBBF24',
+    url: 'https://github.com/vilmurej-cmd/soundsee',
+  },
+  {
+    num: '51',
+    name: 'SIGN BRIDGE',
+    tagline: 'Sign Language Translator',
+    description:
+      'An AI-powered sign language translation platform that bridges the communication gap between deaf and hearing communities with real-time visual translation.',
+    stat: 'Sign AI',
+    color: '#7C3AED',
+    url: 'https://github.com/vilmurej-cmd/signbridge',
+  },
+  {
+    num: '52',
+    name: 'ONE HAND',
+    tagline: 'Adaptive Interface',
+    description:
+      'An adaptive interface platform designed for users with limb differences or limited mobility — reimagining device interaction so everyone can navigate technology with ease.',
+    stat: 'Adaptive UI',
+    color: '#3B82F6',
+    url: 'https://github.com/vilmurej-cmd/onehand',
+  },
+  {
+    num: '53',
+    name: 'CALM SPACE',
+    tagline: 'Sensory-Friendly',
+    description:
+      'A sensory-friendly digital environment for users with autism, ADHD, and sensory processing conditions — reducing overwhelm and creating calm, focused experiences.',
+    stat: 'Sensory AI',
+    color: '#94A3B8',
+    url: 'https://github.com/vilmurej-cmd/calmspace',
+  },
+  {
+    num: '54',
+    name: 'STILL HERE',
+    tagline: 'Depression Companion',
+    description:
+      'A gentle, AI-powered companion for people living with depression — offering daily check-ins, coping tools, and quiet support for the days when getting out of bed is the hardest thing in the world.',
+    stat: 'Companion AI',
+    color: '#F59E0B',
+    url: 'https://github.com/vilmurej-cmd/stillhere',
+  },
+  {
+    num: '55',
+    name: 'INCLUDE ME',
+    tagline: 'Accessibility Checker',
+    description:
+      'An AI-powered accessibility auditing platform that scans websites, apps, and digital experiences to ensure they work for everyone — regardless of ability.',
+    stat: 'Accessibility',
+    color: '#0D9488',
+    url: 'https://github.com/vilmurej-cmd/includeme',
+  },
 ];
 
 const stats = [
-  { end: 48, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 55, suffix: '', label: 'Platforms', color: '#06B6D4' },
   { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
   { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
@@ -514,13 +584,13 @@ export default function Home() {
 
         <ScrollReveal delay={400}>
           <p className="mt-8 text-xl md:text-2xl text-white/80 font-light max-w-2xl leading-relaxed">
-            Connect the Disconnected. Protect the Unprotected. Empower the Brave. Organize the Overwhelmed.
+            Connect the Disconnected. Protect the Unprotected. Empower the Brave. Organize the Overwhelmed. Include the Excluded.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            48 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
+            55 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -561,7 +631,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Forty-Eight Platforms. Forty-Eight Missions.
+              Fifty-Five Platforms. Fifty-Five Missions.
             </h2>
             <p className="text-white/50 text-center mb-20 text-lg">
               One source. Many outputs. Like light through a prism.
@@ -697,7 +767,14 @@ export default function Home() {
                 <span style={{ color: '#EF4444' }}>MY HEALTH</span> tracks wellness.{' '}
                 <span style={{ color: '#8B5CF6' }}>REMEMBER</span> sharpens minds.{' '}
                 <span style={{ color: '#F97316' }}>HELP ME</span> provides tech support.{' '}
-                <span style={{ color: '#B8860B' }}>LIFE STORIES</span> preserves memories.
+                <span style={{ color: '#B8860B' }}>LIFE STORIES</span> preserves memories.{' '}
+                <span style={{ color: '#F59E0B' }}>MY VOICE</span> gives voice to the voiceless.{' '}
+                <span style={{ color: '#FBBF24' }}>SOUND SEE</span> describes the visual world.{' '}
+                <span style={{ color: '#7C3AED' }}>SIGN BRIDGE</span> translates sign language.{' '}
+                <span style={{ color: '#3B82F6' }}>ONE HAND</span> adapts the interface.{' '}
+                <span style={{ color: '#94A3B8' }}>CALM SPACE</span> creates sensory safety.{' '}
+                <span style={{ color: '#F59E0B' }}>STILL HERE</span> stands beside depression.{' '}
+                <span style={{ color: '#0D9488' }}>INCLUDE ME</span> checks accessibility.
               </p>
             </div>
           </ScrollReveal>
@@ -759,7 +836,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Forty-eight platforms. Seven months. Zero funding.
+                  One person. One AI. Fifty-five platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
