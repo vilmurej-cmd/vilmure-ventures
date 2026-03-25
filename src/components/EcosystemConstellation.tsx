@@ -163,7 +163,7 @@ export default function EcosystemConstellation() {
   }, []);
 
   // SVG viewBox center & radius
-  const cx = 350, cy = 350, orbitR = 230, nodeR = 7;
+  const cx = 350, cy = 350, orbitR = 230, nodeR = 9;
 
   // Precompute suite positions
   const suitePositions = suites.map((s) => ({
@@ -383,7 +383,7 @@ export default function EcosystemConstellation() {
                 75+ Languages
               </text>
               {/* LINGUA traveling dot */}
-              <circle r="3" fill="#6366F1" opacity={0.7}>
+              <circle r="5" fill="#6366F1" opacity={0.8} filter="url(#vv-bg-glow)">
                 <animateMotion dur="30s" repeatCount="indefinite">
                   <mpath href="#vv-lingua-path" />
                 </animateMotion>
@@ -408,7 +408,7 @@ export default function EcosystemConstellation() {
                   x2={s.x} y2={s.y}
                   stroke={s.color}
                   strokeWidth="1"
-                  opacity={hoveredSuite ? (hoveredSuite === s.id ? 0.5 : 0.05) : 0.15}
+                  opacity={hoveredSuite ? (hoveredSuite === s.id ? 0.6 : 0.05) : 0.2}
                   style={{ transition: 'opacity 0.3s ease' }}
                 />
               ))}
@@ -426,12 +426,12 @@ export default function EcosystemConstellation() {
                       x1={from.x} y1={from.y}
                       x2={to.x} y2={to.y}
                       stroke={isHighlighted ? from.color : '#ffffff'}
-                      strokeWidth="1"
+                      strokeWidth="1.5"
                       className="vv-conn-line"
-                      opacity={hoveredSuite ? (isHighlighted ? 0.6 : 0.03) : undefined}
+                      opacity={hoveredSuite ? (isHighlighted ? 0.5 : 0.03) : undefined}
                       style={{
                         animationDelay: `${i * 0.7}s`,
-                        transition: 'opacity 0.3s ease',
+                        transition: 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
                       }}
                     />
                     {/* Traveling dot */}
@@ -502,13 +502,13 @@ export default function EcosystemConstellation() {
                           cx={suite.x + app.offset.x}
                           cy={suite.y + app.offset.y}
                           r={nodeR}
-                          fill={`${suite.color}30`}
+                          fill={`${suite.color}40`}
                           stroke={suite.color}
-                          strokeWidth="1.5"
+                          strokeWidth="2"
                           style={{
                             '--node-color': suite.color,
-                            filter: `drop-shadow(0 0 ${isHovered ? 8 : 4}px ${suite.color})`,
-                            transition: 'filter 0.3s ease',
+                            filter: `drop-shadow(0 0 ${isHovered ? 12 : 6}px ${suite.color})`,
+                            transition: 'filter 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
                           } as React.CSSProperties}
                         />
                         {/* Tiny pulse */}
@@ -539,14 +539,14 @@ export default function EcosystemConstellation() {
                     {/* Suite label */}
                     <text
                       x={suite.x}
-                      y={suite.y + 28}
+                      y={suite.y + 30}
                       textAnchor="middle"
                       fill={suite.color}
-                      fontSize="9"
-                      fontWeight="700"
+                      fontSize="11"
+                      fontWeight="800"
                       letterSpacing="1.5"
-                      opacity={isHovered ? 1 : 0.7}
-                      style={{ transition: 'opacity 0.3s ease' }}
+                      opacity={isHovered ? 1 : 0.8}
+                      style={{ transition: 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1)', textShadow: `0 0 8px ${suite.color}40` }}
                     >
                       {suite.name}
                     </text>

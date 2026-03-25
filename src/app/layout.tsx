@@ -40,13 +40,13 @@ export default function RootLayout({
         <CursorGlow />
         <ParticleField />
         {/* Animated Nebula Background */}
-        <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 bg-[#0B1120]" />
-          <div className="absolute w-[800px] h-[800px] rounded-full opacity-[0.07] blur-[120px] animate-nebula-1" style={{ background: 'radial-gradient(circle, #06B6D4, transparent 70%)', top: '10%', left: '20%' }} />
-          <div className="absolute w-[600px] h-[600px] rounded-full opacity-[0.05] blur-[100px] animate-nebula-2" style={{ background: 'radial-gradient(circle, #8B5CF6, transparent 70%)', top: '50%', right: '10%' }} />
-          <div className="absolute w-[700px] h-[700px] rounded-full opacity-[0.06] blur-[110px] animate-nebula-3" style={{ background: 'radial-gradient(circle, #F43F5E, transparent 70%)', bottom: '20%', left: '40%' }} />
-          <div className="absolute w-[500px] h-[500px] rounded-full opacity-[0.04] blur-[90px] animate-nebula-4" style={{ background: 'radial-gradient(circle, #F59E0B, transparent 70%)', top: '30%', left: '60%' }} />
-          <div className="absolute w-[650px] h-[650px] rounded-full opacity-[0.05] blur-[100px] animate-nebula-5" style={{ background: 'radial-gradient(circle, #10B981, transparent 70%)', bottom: '40%', right: '30%' }} />
+        <div style={{ position: 'fixed', inset: 0, zIndex: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+          <div style={{ position: 'absolute', inset: 0, background: '#0B1120' }} />
+          <div style={{ position: 'absolute', width: 800, height: 800, borderRadius: '50%', opacity: 0.09, filter: 'blur(120px)', background: 'radial-gradient(circle, #06B6D4, transparent 70%)', top: '10%', left: '20%', animation: 'nebulaFloat1 45s ease-in-out infinite' }} />
+          <div style={{ position: 'absolute', width: 600, height: 600, borderRadius: '50%', opacity: 0.07, filter: 'blur(100px)', background: 'radial-gradient(circle, #8B5CF6, transparent 70%)', top: '50%', right: '10%', animation: 'nebulaFloat2 55s ease-in-out infinite' }} />
+          <div style={{ position: 'absolute', width: 700, height: 700, borderRadius: '50%', opacity: 0.08, filter: 'blur(110px)', background: 'radial-gradient(circle, #F43F5E, transparent 70%)', bottom: '20%', left: '40%', animation: 'nebulaFloat3 50s ease-in-out infinite' }} />
+          <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', opacity: 0.06, filter: 'blur(90px)', background: 'radial-gradient(circle, #F59E0B, transparent 70%)', top: '30%', left: '60%', animation: 'nebulaFloat4 60s ease-in-out infinite' }} />
+          <div style={{ position: 'absolute', width: 650, height: 650, borderRadius: '50%', opacity: 0.07, filter: 'blur(100px)', background: 'radial-gradient(circle, #10B981, transparent 70%)', bottom: '40%', right: '30%', animation: 'nebulaFloat5 40s ease-in-out infinite' }} />
         </div>
         <div className="spectrum-line fixed top-0 left-0 right-0 z-[60]" />
         <Navigation />
