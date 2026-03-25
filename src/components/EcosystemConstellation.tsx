@@ -219,6 +219,11 @@ export default function EcosystemConstellation() {
           width: 700px;
           height: 700px;
           margin: 0 auto;
+          animation: vv-constellation-enter 2s ease-out forwards;
+        }
+        @keyframes vv-constellation-enter {
+          0% { opacity: 0; transform: scale(0.85); }
+          100% { opacity: 1; transform: scale(1); }
         }
         @media (max-width: 1024px) {
           .vv-constellation { width: 500px; height: 500px; }
@@ -228,29 +233,29 @@ export default function EcosystemConstellation() {
         }
 
         .vv-center-group {
-          animation: vv-pulse 4s ease-in-out infinite;
+          animation: vv-pulse 5s ease-in-out infinite;
           transform-origin: ${cx}px ${cy}px;
         }
 
         .vv-conn-line {
-          animation: vv-conn-pulse 4s ease-in-out infinite;
+          animation: vv-conn-pulse 5s ease-in-out infinite;
         }
 
         .vv-suite-cluster {
           cursor: pointer;
-          transition: opacity 0.3s ease;
+          transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .vv-suite-cluster:hover .vv-app-node {
-          transform: scale(1.3);
+          transform: scale(1.15);
         }
 
         .vv-app-node {
-          transition: transform 0.3s ease;
+          transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           transform-origin: center;
         }
 
         .vv-journey-card {
-          animation: vv-journey-fade 0.5s ease forwards;
+          animation: vv-journey-fade 0.6s ease-out forwards;
         }
 
         .vv-journey-dot-line {
@@ -266,28 +271,28 @@ export default function EcosystemConstellation() {
           gap: 0;
         }
         .vv-journey-dot {
-          width: 12px;
-          height: 12px;
+          width: 16px;
+          height: 16px;
           border-radius: 50%;
           flex-shrink: 0;
         }
         .vv-journey-connector {
-          width: 32px;
+          width: 48px;
           height: 2px;
           flex-shrink: 0;
         }
         .vv-journey-name {
-          font-size: 0.7rem;
-          margin-top: 4px;
+          font-size: 0.75rem;
+          margin-top: 6px;
           text-align: center;
           letter-spacing: 0.5px;
-          font-weight: 600;
+          font-weight: 700;
         }
 
         @media (max-width: 640px) {
-          .vv-journey-connector { width: 16px; }
-          .vv-journey-dot { width: 10px; height: 10px; }
-          .vv-journey-name { font-size: 0.6rem; }
+          .vv-journey-connector { width: 20px; }
+          .vv-journey-dot { width: 12px; height: 12px; }
+          .vv-journey-name { font-size: 0.65rem; }
         }
       `}</style>
 
@@ -485,7 +490,7 @@ export default function EcosystemConstellation() {
                     key={suite.id}
                     className="vv-suite-cluster"
                     opacity={isDimmed ? 0.25 : 1}
-                    style={{ transition: 'opacity 0.3s ease' }}
+                    style={{ transition: 'opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1)' }}
                     onMouseEnter={() => setHoveredSuite(suite.id)}
                     onMouseLeave={() => setHoveredSuite(null)}
                     onClick={() => handleSuiteClick(suite.scrollTo)}
@@ -563,12 +568,12 @@ export default function EcosystemConstellation() {
               onMouseLeave={() => setJourneyPaused(false)}
             >
               <div key={activeJourney} className="vv-journey-card">
-                <h3 className="text-xl font-bold text-white/90 mb-4">
+                <h3 className="text-2xl font-bold text-white/90 mb-6">
                   &ldquo;{journeys[activeJourney].title}&rdquo;
                 </h3>
 
                 {/* Path visualization */}
-                <div className="vv-journey-dot-line mb-5">
+                <div className="vv-journey-dot-line mb-6">
                   {journeys[activeJourney].path.map((step, i) => (
                     <div key={step.name} className="vv-journey-dot-item">
                       {i > 0 && (
@@ -582,7 +587,7 @@ export default function EcosystemConstellation() {
                           className="vv-journey-dot"
                           style={{
                             background: step.color,
-                            boxShadow: `0 0 8px ${step.color}`,
+                            boxShadow: `0 0 12px ${step.color}60`,
                           }}
                         />
                         <span className="vv-journey-name" style={{ color: step.color }}>
@@ -593,7 +598,7 @@ export default function EcosystemConstellation() {
                   ))}
                 </div>
 
-                <p className="text-white/60 text-sm leading-relaxed">
+                <p className="text-white/60 text-base leading-relaxed">
                   {journeys[activeJourney].story}
                 </p>
               </div>
@@ -607,9 +612,9 @@ export default function EcosystemConstellation() {
                   onClick={() => setActiveJourney(i)}
                   className="transition-all duration-300"
                   style={{
-                    width: i === activeJourney ? 24 : 8,
-                    height: 8,
-                    borderRadius: 4,
+                    width: i === activeJourney ? 28 : 12,
+                    height: 12,
+                    borderRadius: 6,
                     background: i === activeJourney ? '#06B6D4' : 'rgba(255,255,255,0.15)',
                     border: 'none',
                     cursor: 'pointer',

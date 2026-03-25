@@ -11,6 +11,7 @@ export interface AppData {
   features?: string[];
   builtFor?: string;
   suiteName: string;
+  url?: string;
 }
 
 const statusConfig = {
@@ -92,18 +93,39 @@ function AppModal({ app, onClose }: { app: AppData; onClose: () => void }) {
           </div>
         )}
 
-        {/* App Store badge */}
-        <div className="flex items-center justify-center gap-3 p-4 rounded-xl"
-          style={{ background: 'rgba(30,41,59,0.5)', border: '1px solid rgba(51,65,85,1)' }}
-        >
-          <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.56C5.55 8.1 7.13 7.17 8.82 7.15C10.1 7.13 11.32 8.01 12.11 8.01C12.89 8.01 14.37 6.95 15.92 7.11C16.57 7.14 18.39 7.38 19.56 9.07C19.47 9.13 17.29 10.37 17.31 13.02C17.34 16.19 20.05 17.27 20.08 17.28C20.05 17.34 19.67 18.72 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
-          </svg>
-          <div>
-            <div className="text-xs text-gray-400">Coming Soon to the</div>
-            <div className="text-lg font-semibold text-white">App Store</div>
+        {/* CTA — conditional based on status/url */}
+        {app.url ? (
+          <a
+            href={app.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 flex items-center justify-center gap-3 p-4 rounded-xl transition-all duration-300 group"
+            style={{
+              background: `linear-gradient(135deg, ${app.accentColor}15, ${app.accentColor}08)`,
+              border: `1px solid ${app.accentColor}30`,
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.borderColor = `${app.accentColor}60`; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = `${app.accentColor}30`; }}
+          >
+            <span className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
+              Visit Platform &rarr;
+            </span>
+          </a>
+        ) : app.status === 'testflight' ? (
+          <div className="mt-8 flex items-center justify-center gap-3 p-4 rounded-xl" style={{ background: 'rgba(30,41,59,0.5)', border: '1px solid rgba(59,130,246,0.2)' }}>
+            <span className="text-blue-400 text-sm font-medium">Available on TestFlight</span>
           </div>
-        </div>
+        ) : (
+          <div className="mt-8 flex items-center justify-center gap-3 p-4 rounded-xl" style={{ background: 'rgba(30,41,59,0.5)', border: '1px solid rgba(51,65,85,1)' }}>
+            <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.99 2.97 12.5 4.7 9.56C5.55 8.1 7.13 7.17 8.82 7.15C10.1 7.13 11.32 8.01 12.11 8.01C12.89 8.01 14.37 6.95 15.92 7.11C16.57 7.14 18.39 7.38 19.56 9.07C19.47 9.13 17.29 10.37 17.31 13.02C17.34 16.19 20.05 17.27 20.08 17.28C20.05 17.34 19.67 18.72 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+            </svg>
+            <div>
+              <div className="text-xs text-gray-400">Coming Soon to the</div>
+              <div className="text-lg font-semibold text-white">App Store</div>
+            </div>
+          </div>
+        )}
 
         {/* Dedication */}
         {app.builtFor && (

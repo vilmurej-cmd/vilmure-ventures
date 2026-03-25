@@ -411,3 +411,40 @@
   0% { opacity: 1; transform: translateY(0) rotate(0deg) scale(1); }
   100% { opacity: 0; transform: translateY(100vh) rotate(720deg) scale(0); }
 }
+
+/* ─── Nebula Background ─── */
+@keyframes nebula-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(80px, -60px) scale(1.1); }
+  50% { transform: translate(-40px, 80px) scale(0.95); }
+  75% { transform: translate(60px, 40px) scale(1.05); }
+}
+@keyframes nebula-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-70px, 50px) scale(1.08); }
+  50% { transform: translate(60px, -40px) scale(0.92); }
+  75% { transform: translate(-30px, -70px) scale(1.03); }
+}
+@keyframes nebula-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(50px, 70px) scale(1.06); }
+  50% { transform: translate(-80px, -30px) scale(0.97); }
+  75% { transform: translate(40px, -60px) scale(1.1); }
+}
+@keyframes nebula-4 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-60px, -40px) scale(1.12); }
+  50% { transform: translate(70px, 60px) scale(0.9); }
+  75% { transform: translate(-50px, 30px) scale(1.05); }
+}
+@keyframes nebula-5 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(40px, -80px) scale(1.04); }
+  50% { transform: translate(-60px, 50px) scale(1.08); }
+  75% { transform: translate(70px, 20px) scale(0.95); }
+}
+.animate-nebula-1 { animation: nebula-1 45s ease-in-out infinite; }
+.animate-nebula-2 { animation: nebula-2 55s ease-in-out infinite; }
+.animate-nebula-3 { animation: nebula-3 50s ease-in-out infinite; }
+.animate-nebula-4 { animation: nebula-4 60s ease-in-out infinite; }
+.animate-nebula-5 { animation: nebula-5 40s ease-in-out infinite; }

@@ -12,7 +12,7 @@ const suites: { name: string; tagline: string; color: string; apps: AppData[] }[
     tagline: 'The Real Estate Revolution',
     color: '#06B6D4',
     apps: [
-      { name: 'EZRE OS', icon: '🏠', summary: 'The first AI operating system for real estate. 11 products. 71 AI tools. Zero VC.', accentColor: '#06B6D4', status: 'live', suiteName: 'EZRE SUITE', features: ['71 AI Tools', '11 Integrated Products', '50-State Compliance Engine', 'Enterprise White-Label Ready'] },
+      { name: 'EZRE OS', icon: '🏠', summary: 'The first AI operating system for real estate. 11 products. 71 AI tools. Zero VC.', accentColor: '#06B6D4', status: 'live', suiteName: 'EZRE SUITE', features: ['71 AI Tools', '11 Integrated Products', '50-State Compliance Engine', 'Enterprise White-Label Ready'], url: 'https://myezre.ai' },
       { name: 'EZRE SAFE', icon: '🛡️', summary: 'Your guardian angel on every showing. SOS panic button. GPS tracking. AI client vetting. Because making it home is the most important closing.', accentColor: '#06B6D4', status: 'testflight', suiteName: 'EZRE SUITE', features: ['SOS Panic Button', 'AI Client Vetting', 'GPS Check-In Timers', 'ARIA Buddy System'] },
     ],
   },
@@ -21,10 +21,10 @@ const suites: { name: string; tagline: string; color: string; apps: AppData[] }[
     tagline: 'Heal. Feel. Grow.',
     color: '#10B981',
     apps: [
-      { name: 'CLARITY', icon: '💙', summary: 'Just got a diagnosis? CLARITY turns medical confusion into clear answers. AI-powered. Zero judgment. Zero data stored.', accentColor: '#10B981', status: 'live', suiteName: 'WELLNESS SUITE', features: ['AI Diagnosis Reports', 'CLARITY Kids Mode', 'Zero Data Storage', 'Print Questions for Doctor'] },
-      { name: 'HARMONY', icon: '🎵', summary: 'Tell it how you feel. It composes music that meets you there — and gently takes you somewhere better.', accentColor: '#10B981', status: 'live', suiteName: 'WELLNESS SUITE', features: ['Tone.js Audio Engine', '12 Emotion Categories', 'Visual Piano Display', 'Shareable Compositions'] },
+      { name: 'CLARITY', icon: '💙', summary: 'Just got a diagnosis? CLARITY turns medical confusion into clear answers. AI-powered. Zero judgment. Zero data stored.', accentColor: '#10B981', status: 'live', suiteName: 'WELLNESS SUITE', features: ['AI Diagnosis Reports', 'CLARITY Kids Mode', 'Zero Data Storage', 'Print Questions for Doctor'], url: 'https://clarity-platform-eta.vercel.app' },
+      { name: 'HARMONY', icon: '🎵', summary: 'Tell it how you feel. It composes music that meets you there — and gently takes you somewhere better.', accentColor: '#10B981', status: 'live', suiteName: 'WELLNESS SUITE', features: ['Tone.js Audio Engine', '12 Emotion Categories', 'Visual Piano Display', 'Shareable Compositions'], url: 'https://harmony-platform-seven.vercel.app' },
       { name: 'SPARK', icon: '🦊', summary: "A sick kid walks into a hospital scared. SPARK makes them the hero of their own adventure. Meet Ember — the fox who's been through it too.", accentColor: '#10B981', status: 'testflight', suiteName: 'WELLNESS SUITE', features: ['Brave Oath Ceremony', 'AI Storybook Generator', '12 Brave World Lands', 'Original Musical Compositions'], builtFor: 'For every child who needs to know: you are already brave.' },
-      { name: 'GENESIS', icon: '🧬', summary: 'Explore the human body in 3D. Real anatomical models. AI-guided learning. The future of anatomy education.', accentColor: '#10B981', status: 'live', suiteName: 'WELLNESS SUITE', features: ['3D Anatomical Models', 'Real Medical GLB Files', 'AI-Guided Learning', 'Interactive Exploration'] },
+      { name: 'GENESIS', icon: '🧬', summary: 'Explore the human body in 3D. Real anatomical models. AI-guided learning. The future of anatomy education.', accentColor: '#10B981', status: 'live', suiteName: 'WELLNESS SUITE', features: ['3D Anatomical Models', 'Real Medical GLB Files', 'AI-Guided Learning', 'Interactive Exploration'], url: 'https://genesis-platform-taupe.vercel.app' },
     ],
   },
   {
@@ -32,7 +32,7 @@ const suites: { name: string; tagline: string; color: string; apps: AppData[] }[
     tagline: 'Human Bonds, Amplified',
     color: '#F43F5E',
     apps: [
-      { name: 'BRIDGE', icon: '🌉', summary: 'Most people use AI wrong. BRIDGE teaches you how to build a real partnership with it. Your AI co-pilot training ground.', accentColor: '#F43F5E', status: 'live', suiteName: 'CONNECTION SUITE', features: ['5-Step AI Assessment', 'Partnership Profile Generator', 'Session Planning', 'Progress Tracking'] },
+      { name: 'BRIDGE', icon: '🌉', summary: 'Most people use AI wrong. BRIDGE teaches you how to build a real partnership with it. Your AI co-pilot training ground.', accentColor: '#F43F5E', status: 'live', suiteName: 'CONNECTION SUITE', features: ['5-Step AI Assessment', 'Partnership Profile Generator', 'Session Planning', 'Progress Tracking'], url: 'https://clarity-platform-mk9w.vercel.app' },
       { name: 'KINDRED', icon: '💕', summary: "Couples don't break up overnight. KINDRED catches the drift early — AI relationship health monitoring that actually helps.", accentColor: '#F43F5E', status: 'coming-soon', suiteName: 'CONNECTION SUITE', features: ['Relationship Health Score', 'Communication Pattern Analysis', 'Early Drift Detection', 'Guided Conversations'] },
       { name: 'PULSE', icon: '🫀', summary: "It's 2 AM. You can't sleep. You feel alone. PULSE connects you with someone who gets it. The AI social network for real humans.", accentColor: '#F43F5E', status: 'coming-soon', suiteName: 'CONNECTION SUITE', features: ['2 AM Connection Matching', 'AI-Moderated Spaces', 'Anonymous Support', 'Community Building'] },
     ],
@@ -43,7 +43,7 @@ const suites: { name: string; tagline: string; color: string; apps: AppData[] }[
     color: '#F59E0B',
     apps: [
       { name: 'HAVEN', icon: '🛡️', summary: "For the person reading this who needs help but can't ask out loud. Zero-trace. Invisible. Built for survival. For Stefania.", accentColor: '#F59E0B', status: 'live', suiteName: 'SAFETY SUITE', features: ['Zero-Trace Architecture', 'Invisible Safety Tools', 'In-Memory-Only Caches', 'Emergency Resources'], builtFor: 'In memory of Stefania Marie Gray. Her shield protects.' },
-      { name: 'TRUTH', icon: '⚖️', summary: 'Paste any article. TRUTH shows you exactly where the bias lives — political, emotional, factual. See clearly. Think independently.', accentColor: '#F59E0B', status: 'live', suiteName: 'SAFETY SUITE', features: ['Political Bias Detection', 'Emotional Language Scoring', 'Source Credibility', 'Side-by-Side Analysis'] },
+      { name: 'TRUTH', icon: '⚖️', summary: 'Paste any article. TRUTH shows you exactly where the bias lives — political, emotional, factual. See clearly. Think independently.', accentColor: '#F59E0B', status: 'live', suiteName: 'SAFETY SUITE', features: ['Political Bias Detection', 'Emotional Language Scoring', 'Source Credibility', 'Side-by-Side Analysis'], url: 'https://truth-platform-blond.vercel.app' },
     ],
   },
   {
