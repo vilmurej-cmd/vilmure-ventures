@@ -2,6 +2,7 @@ import Link from 'next/link';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import ScrollReveal from '@/components/ScrollReveal';
 import Prism from '@/components/Prism';
+import EcosystemConstellation from '@/components/EcosystemConstellation';
 
 const platforms = [
   {
@@ -780,6 +781,14 @@ export default function Home() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Spectrum Line Divider */}
+      <div className="spectrum-line my-8" />
+
+      {/* Ecosystem Constellation */}
+      <ScrollReveal>
+        <EcosystemConstellation />
+      </ScrollReveal>
 
       {/* Spectrum Line Divider */}
       <div className="spectrum-line my-8" />
