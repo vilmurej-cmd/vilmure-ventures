@@ -3,567 +3,86 @@ import AnimatedCounter from '@/components/AnimatedCounter';
 import ScrollReveal from '@/components/ScrollReveal';
 import Prism from '@/components/Prism';
 import EcosystemConstellation from '@/components/EcosystemConstellation';
+import AppCard, { type AppData } from '@/components/AppCard';
 
-const platforms = [
+/* ─── Suite Definitions ─── */
+const suites: { name: string; tagline: string; color: string; apps: AppData[] }[] = [
   {
-    num: '01',
-    name: 'EZRE OS',
-    tagline: 'The Operating System for Real Estate',
-    description:
-      'An 11-product AI-powered platform that connects every stakeholder in a real estate transaction — agents, lenders, title companies, and clients — into one seamless operating system.',
-    stat: '11 Products',
+    name: 'EZRE SUITE',
+    tagline: 'The Real Estate Revolution',
     color: '#06B6D4',
-    url: 'https://myezre.ai',
+    apps: [
+      { name: 'EZRE OS', icon: '🏠', summary: 'The first AI operating system for real estate. 11 products. 71 AI tools. Zero VC.', accentColor: '#06B6D4', status: 'live', suiteName: 'EZRE SUITE', features: ['71 AI Tools', '11 Integrated Products', '50-State Compliance Engine', 'Enterprise White-Label Ready'] },
+      { name: 'EZRE SAFE', icon: '🛡️', summary: 'Your guardian angel on every showing. SOS panic button. GPS tracking. AI client vetting. Because making it home is the most important closing.', accentColor: '#06B6D4', status: 'testflight', suiteName: 'EZRE SUITE', features: ['SOS Panic Button', 'AI Client Vetting', 'GPS Check-In Timers', 'ARIA Buddy System'] },
+    ],
   },
   {
-    num: '02',
-    name: 'CLARITY',
-    tagline: 'Every patient deserves to understand their fight',
-    description:
-      'AI-powered medical translation that converts complex diagnoses, lab results, and treatment plans into clear, compassionate language patients can actually understand.',
-    stat: '22 Pages',
-    color: '#3B82F6',
-    url: 'https://clarity-platform-eta.vercel.app',
-  },
-  {
-    num: '03',
-    name: 'HARMONY',
-    tagline: 'Every moment deserves its own music',
-    description:
-      'An AI music companion that understands your emotions, activities, and preferences to curate the perfect soundtrack for every moment of your life.',
-    stat: '7 Lenses',
-    color: '#D4A843',
-    url: 'https://harmony-platform-seven.vercel.app',
-  },
-  {
-    num: '04',
-    name: 'BRIDGE',
-    tagline: 'Your dream deserves a partner',
-    description:
-      'An AI partner platform that helps dreamers turn vague ideas into actionable plans — whether launching a business, writing a book, or changing careers.',
-    stat: '12 Tools',
-    color: '#8B5CF6',
-    url: 'https://clarity-platform-mk9w.vercel.app',
-  },
-  {
-    num: '05',
-    name: 'LINGUA',
-    tagline: 'No voice goes unheard',
-    description:
-      'A real-time translation and communication platform supporting 75+ languages, breaking down language barriers for immigrants, travelers, and global teams.',
-    stat: '75+ Languages',
-    color: 'spectrum',
-    url: 'https://lingua-platform.vercel.app',
-  },
-  {
-    num: '06',
-    name: 'TRUTH',
-    tagline: 'The truth is not hidden. It\'s scattered.',
-    description:
-      'An AI-powered research and discovery engine that aggregates, analyzes, and synthesizes information across sources to surface truth from noise.',
-    stat: '7 Search Modes',
-    color: '#E11D48',
-    url: 'https://truth-platform-blond.vercel.app',
-  },
-  {
-    num: '07',
-    name: 'GENESIS',
-    tagline: 'Understand the body. Decode disease. Discover the cure.',
-    description:
-      'A biomedical research platform that uses AI to help researchers, students, and clinicians explore human biology, disease mechanisms, and therapeutic pathways.',
-    stat: '8 Modules',
-    color: '#00E5FF',
-    url: 'https://genesis-platform-taupe.vercel.app',
-  },
-  {
-    num: '08',
-    name: 'HAVEN',
-    tagline: 'No woman fights alone',
-    description:
-      'A safety and support platform for domestic violence survivors — connecting them to resources, safety planning tools, and a community that understands.',
-    stat: '6 Safety Tools',
-    color: '#A78BFA',
-    url: '#',
-  },
-  {
-    num: '09',
-    name: 'SPARK',
-    tagline: 'Empowering the bravest kids in the world',
-    description:
-      'The world\'s first children\'s health empowerment platform. When a child is diagnosed with any condition, SPARK makes them the HERO — not the patient. Features 12 explorable lands, a PixiJS game engine, 14 original compositions, and Ember the Fox.',
-    stat: '14 Compositions',
-    color: '#F59E0B',
-    url: 'https://spark-platform-alpha.vercel.app',
-  },
-  {
-    num: '10',
-    name: 'COMMAND',
-    tagline: 'Your AI Chief of Staff',
-    description:
-      'Every other scheduling tool optimizes for productivity. COMMAND optimizes for your life. Morning briefings, live co-pilot, evening debriefs, and a Life Balance Engine that makes sure work never steals the moments that matter most.',
-    stat: 'Life Balance',
-    color: '#F59E0B',
-    url: 'https://command-platform-nine.vercel.app',
-  },
-  {
-    num: '11',
-    name: 'AM I COOKED?',
-    tagline: 'AI Life Roast',
-    description:
-      'Upload your resume, dating profile, or social media and let AI roast your life choices with brutal honesty and comedic timing. The truth hurts — but at least it\'s funny.',
-    stat: 'Brutal Honesty',
-    color: '#FF6B35',
-    url: 'https://github.com/vilmurej-cmd/amicooked',
-  },
-  {
-    num: '12',
-    name: 'GHOST WRITER',
-    tagline: 'AI Text Message Assistant',
-    description:
-      'Never send a bad text again. GHOST WRITER crafts the perfect response for any conversation — dating, networking, awkward situations, or that text you\'ve been staring at for 20 minutes.',
-    stat: 'Perfect Replies',
-    color: '#8B5CF6',
-    url: 'https://github.com/vilmurej-cmd/ghostwriter',
-  },
-  {
-    num: '13',
-    name: 'VIBE CHECK',
-    tagline: 'AI Aura & Energy Reader',
-    description:
-      'Upload a selfie and let AI read your aura, energy, and vibe. Get a personalized energy report, color analysis, and cosmic insights that are equal parts fun and eerily accurate.',
-    stat: 'Aura Reading',
-    color: '#06B6D4',
-    url: 'https://github.com/vilmurej-cmd/vibecheck',
-  },
-  {
-    num: '14',
-    name: 'HYPE ME UP',
-    tagline: 'AI Confidence Booster',
-    description:
-      'When you need a pick-me-up, HYPE ME UP delivers personalized motivational fire. Tell it what you\'re going through and get the world\'s most aggressive encouragement.',
-    stat: 'Pure Motivation',
-    color: '#FFD700',
-    url: 'https://github.com/vilmurej-cmd/hypemeup',
-  },
-  {
-    num: '15',
-    name: 'SPLIT',
-    tagline: 'AI Bill Splitter',
-    description:
-      'The smartest way to split any bill. SPLIT uses AI to handle uneven splits, tax, tip, and shared items — so you never have to do the awkward math again.',
-    stat: 'Fair Splits',
+    name: 'WELLNESS SUITE',
+    tagline: 'Heal. Feel. Grow.',
     color: '#10B981',
-    url: 'https://github.com/vilmurej-cmd/splitapp',
+    apps: [
+      { name: 'CLARITY', icon: '💙', summary: 'Just got a diagnosis? CLARITY turns medical confusion into clear answers. AI-powered. Zero judgment. Zero data stored.', accentColor: '#10B981', status: 'live', suiteName: 'WELLNESS SUITE', features: ['AI Diagnosis Reports', 'CLARITY Kids Mode', 'Zero Data Storage', 'Print Questions for Doctor'] },
+      { name: 'HARMONY', icon: '🎵', summary: 'Tell it how you feel. It composes music that meets you there — and gently takes you somewhere better.', accentColor: '#10B981', status: 'live', suiteName: 'WELLNESS SUITE', features: ['Tone.js Audio Engine', '12 Emotion Categories', 'Visual Piano Display', 'Shareable Compositions'] },
+      { name: 'SPARK', icon: '🦊', summary: "A sick kid walks into a hospital scared. SPARK makes them the hero of their own adventure. Meet Ember — the fox who's been through it too.", accentColor: '#10B981', status: 'testflight', suiteName: 'WELLNESS SUITE', features: ['Brave Oath Ceremony', 'AI Storybook Generator', '12 Brave World Lands', 'Original Musical Compositions'], builtFor: 'For every child who needs to know: you are already brave.' },
+      { name: 'GENESIS', icon: '🧬', summary: 'Explore the human body in 3D. Real anatomical models. AI-guided learning. The future of anatomy education.', accentColor: '#10B981', status: 'live', suiteName: 'WELLNESS SUITE', features: ['3D Anatomical Models', 'Real Medical GLB Files', 'AI-Guided Learning', 'Interactive Exploration'] },
+    ],
   },
   {
-    num: '16',
-    name: 'POCKET TRAINER',
-    tagline: 'AI Workout Generator',
-    description:
-      'Your personal AI fitness coach that builds custom workouts based on your goals, equipment, and time. No gym membership required — just tell it what you have and watch it work.',
-    stat: 'Custom Workouts',
-    color: '#3B82F6',
-    url: 'https://github.com/vilmurej-cmd/pockettrainer',
+    name: 'CONNECTION SUITE',
+    tagline: 'Human Bonds, Amplified',
+    color: '#F43F5E',
+    apps: [
+      { name: 'BRIDGE', icon: '🌉', summary: 'Most people use AI wrong. BRIDGE teaches you how to build a real partnership with it. Your AI co-pilot training ground.', accentColor: '#F43F5E', status: 'live', suiteName: 'CONNECTION SUITE', features: ['5-Step AI Assessment', 'Partnership Profile Generator', 'Session Planning', 'Progress Tracking'] },
+      { name: 'KINDRED', icon: '💕', summary: "Couples don't break up overnight. KINDRED catches the drift early — AI relationship health monitoring that actually helps.", accentColor: '#F43F5E', status: 'coming-soon', suiteName: 'CONNECTION SUITE', features: ['Relationship Health Score', 'Communication Pattern Analysis', 'Early Drift Detection', 'Guided Conversations'] },
+      { name: 'PULSE', icon: '🫀', summary: "It's 2 AM. You can't sleep. You feel alone. PULSE connects you with someone who gets it. The AI social network for real humans.", accentColor: '#F43F5E', status: 'coming-soon', suiteName: 'CONNECTION SUITE', features: ['2 AM Connection Matching', 'AI-Moderated Spaces', 'Anonymous Support', 'Community Building'] },
+    ],
   },
   {
-    num: '17',
-    name: 'DINNER TONIGHT',
-    tagline: 'AI Meal Planner',
-    description:
-      'Tell it what\'s in your fridge and DINNER TONIGHT builds a complete meal plan with recipes, nutrition info, and grocery lists. AI-powered meal planning that actually understands your kitchen.',
-    stat: 'Meal Plans',
-    color: '#F97316',
-    url: 'https://github.com/vilmurej-cmd/dinnertonight',
-  },
-  {
-    num: '18',
-    name: 'RATE MY FIT',
-    tagline: 'AI Fashion Critic',
-    description:
-      'Upload your outfit and let AI judge your style with brutal honesty and actionable advice. Get rated, roasted, and restyled — all in seconds.',
-    stat: 'Style Ratings',
-    color: '#EC4899',
-    url: 'https://github.com/vilmurej-cmd/ratemyfit',
-  },
-  {
-    num: '19',
-    name: 'DREAM DECODER',
-    tagline: 'AI Dream Interpreter',
-    description:
-      'Describe your dream and let AI decode the symbols, emotions, and hidden meanings. Wake up with answers instead of questions.',
-    stat: 'Dream Analysis',
-    color: '#4F46E5',
-    url: 'https://github.com/vilmurej-cmd/dreamdecoder',
-  },
-  {
-    num: '20',
-    name: 'WOULD THEY SAY THAT?',
-    tagline: 'AI Historical Advisor',
-    description:
-      'Ask history\'s greatest minds for advice on your modern problems. Get wisdom from Einstein, Cleopatra, or Marcus Aurelius — filtered through AI that stays true to their voice.',
-    stat: 'Historical Wisdom',
-    color: '#B8860B',
-    url: 'https://github.com/vilmurej-cmd/wouldtheysaythat',
-  },
-  {
-    num: '21',
-    name: 'ROAST MY RESUME',
-    tagline: 'AI Career Roast + Fix',
-    description:
-      'Upload your resume and get brutally honest AI feedback that tears it apart — then rebuilds it better. The roast you need before the job you want.',
-    stat: 'Career Fixes',
-    color: '#EF4444',
-    url: 'https://github.com/vilmurej-cmd/roastmyresume',
-  },
-  {
-    num: '22',
-    name: 'PEP TALK PET',
-    tagline: 'AI Emotional Support',
-    description:
-      'Your personal AI comfort companion that delivers warm, fuzzy encouragement whenever you need it. Like a supportive best friend who never sleeps.',
-    stat: 'Warm Fuzzies',
+    name: 'SAFETY SUITE',
+    tagline: 'Protection Without Compromise',
     color: '#F59E0B',
-    url: 'https://github.com/vilmurej-cmd/peptalkpet',
+    apps: [
+      { name: 'HAVEN', icon: '🛡️', summary: "For the person reading this who needs help but can't ask out loud. Zero-trace. Invisible. Built for survival. For Stefania.", accentColor: '#F59E0B', status: 'live', suiteName: 'SAFETY SUITE', features: ['Zero-Trace Architecture', 'Invisible Safety Tools', 'In-Memory-Only Caches', 'Emergency Resources'], builtFor: 'In memory of Stefania Marie Gray. Her shield protects.' },
+      { name: 'TRUTH', icon: '⚖️', summary: 'Paste any article. TRUTH shows you exactly where the bias lives — political, emotional, factual. See clearly. Think independently.', accentColor: '#F59E0B', status: 'live', suiteName: 'SAFETY SUITE', features: ['Political Bias Detection', 'Emotional Language Scoring', 'Source Credibility', 'Side-by-Side Analysis'] },
+    ],
   },
   {
-    num: '23',
-    name: 'SIDE HUSTLE FINDER',
-    tagline: 'AI Money Scanner',
-    description:
-      'Tell it your skills, schedule, and goals — and SIDE HUSTLE FINDER maps out personalized money-making opportunities you can start this week.',
-    stat: 'Hustle Plans',
-    color: '#10B981',
-    url: 'https://github.com/vilmurej-cmd/sidehustlefinder',
-  },
-  {
-    num: '24',
-    name: 'BABY NAMER',
-    tagline: 'AI Name Generator',
-    description:
-      'The smartest way to name your baby. AI analyzes meaning, origin, popularity trends, and sibling compatibility to generate the perfect name list.',
-    stat: 'Name Ideas',
-    color: '#EC4899',
-    url: 'https://github.com/vilmurej-cmd/babynamer',
-  },
-  {
-    num: '25',
-    name: 'VOICE VAULT',
-    tagline: 'AI Voice Organizer',
-    description:
-      'An AI-powered voice memo platform that records, transcribes, organizes, and resurfaces your spoken ideas — so no thought is ever lost again.',
-    stat: 'Voice AI',
-    color: '#FB923C',
-    url: 'https://github.com/vilmurej-cmd/voicevault',
-  },
-  {
-    num: '26',
-    name: 'RECEIPT BOSS',
-    tagline: 'AI Expense Tracker',
-    description:
-      'Snap a photo of any receipt and let AI categorize, track, and analyze your spending. Effortless expense management powered by computer vision.',
-    stat: 'Expense AI',
-    color: '#10B981',
-    url: 'https://github.com/vilmurej-cmd/receiptboss',
-  },
-  {
-    num: '27',
-    name: 'PARENT PILOT',
-    tagline: 'AI Parenting Assistant',
-    description:
-      'Your AI co-parent for the modern age. Get age-appropriate advice, milestone tracking, and answers to every parenting question at 3 AM.',
-    stat: 'Parenting AI',
-    color: '#60A5FA',
-    url: 'https://github.com/vilmurej-cmd/parentpilot',
-  },
-  {
-    num: '28',
-    name: 'LEAF',
-    tagline: 'AI Eco Coach',
-    description:
-      'Your personal sustainability coach that tracks your carbon footprint, suggests greener alternatives, and gamifies eco-friendly living.',
-    stat: 'Eco Insights',
-    color: '#059669',
-    url: 'https://github.com/vilmurej-cmd/leafapp',
-  },
-  {
-    num: '29',
-    name: 'NEIGHBOR',
-    tagline: 'Community Network',
-    description:
-      'A hyperlocal community platform that connects neighbors for sharing resources, coordinating events, and building stronger neighborhoods.',
-    stat: 'Local Network',
-    color: '#0D9488',
-    url: 'https://github.com/vilmurej-cmd/neighborapp',
-  },
-  {
-    num: '30',
-    name: 'SMART MONEY',
-    tagline: 'AI Financial Coach',
-    description:
-      'Your AI-powered financial advisor that analyzes spending, builds budgets, and delivers personalized money strategies — no expensive advisor required.',
-    stat: 'Money Coach',
-    color: '#22C55E',
-    url: 'https://github.com/vilmurej-cmd/smartmoney',
-  },
-  {
-    num: '31',
-    name: 'WONDER',
-    tagline: 'The One Kids App',
-    description:
-      'The ultimate kids app — a single, safe, AI-powered world where children explore, learn, create, and grow. One app to replace them all.',
-    stat: 'Kids Suite',
-    color: '#7C3AED',
-    url: 'https://github.com/vilmurej-cmd/wonderapp',
-  },
-  {
-    num: '32',
-    name: 'STORY SPARK',
-    tagline: 'AI Bedtime Stories',
-    description:
-      'AI-generated bedtime stories personalized for your child — starring them, their friends, and their favorite things. A new adventure every night.',
-    stat: 'Bedtime AI',
-    color: '#FBBF24',
-    url: 'https://github.com/vilmurej-cmd/storyspark',
-  },
-  {
-    num: '33',
-    name: 'TINY CHEF',
-    tagline: 'Kids Cooking Adventure',
-    description:
-      'A kid-friendly cooking app that turns mealtime into an adventure. Step-by-step recipes, safety tips, and fun challenges designed for little hands.',
-    stat: 'Kids Cooking',
-    color: '#F97316',
-    url: 'https://github.com/vilmurej-cmd/tinychef',
-  },
-  {
-    num: '34',
-    name: 'QUEST',
-    tagline: 'Daily Learning Adventure',
-    description:
-      'A daily learning adventure app for kids that turns education into an epic quest. New challenges, rewards, and discoveries every single day.',
-    stat: 'Daily Quests',
+    name: 'EMPOWERMENT SUITE',
+    tagline: 'Level the Playing Field',
     color: '#8B5CF6',
-    url: 'https://github.com/vilmurej-cmd/questapp',
+    apps: [
+      { name: 'SCHOLAR', icon: '🎓', summary: "The world's first AI-native university. Zero tuition. Degree-equivalent programs. Your personal AI tutor SAGE. Education should be free.", accentColor: '#8B5CF6', status: 'coming-soon', suiteName: 'EMPOWERMENT SUITE', features: ['AI Tutor SAGE', '4 Degree Programs', 'Zero Tuition', 'Employer Partnerships'] },
+      { name: 'LEVEL UP', icon: '🎮', summary: 'Duolingo for life skills. Negotiate a raise. Fix your credit. Cook a meal. Meet Scout — your AI life coach mascot.', accentColor: '#8B5CF6', status: 'coming-soon', suiteName: 'EMPOWERMENT SUITE', features: ['Life Skill Courses', 'AI Coach Scout', 'Gamified Progress', 'Practical Real-World Skills'] },
+      { name: 'PROSPER', icon: '💰', summary: 'Your AI financial coach. No judgment. No sales pitch. Just honest guidance to build the life you want.', accentColor: '#8B5CF6', status: 'coming-soon', suiteName: 'EMPOWERMENT SUITE', features: ['AI Financial Coaching', 'Budget Analysis', 'Goal Tracking', 'Zero Sales Pitches'] },
+    ],
   },
   {
-    num: '35',
-    name: 'FEELINGS FRIENDS',
-    tagline: 'Emotional Intelligence',
-    description:
-      'An AI-powered emotional intelligence app for kids. Helps children identify, understand, and express their feelings through friendly characters and guided activities.',
-    stat: 'EQ Builder',
-    color: '#7C3AED',
-    url: 'https://github.com/vilmurej-cmd/feelingsfriends',
+    name: 'LIFE SUITE',
+    tagline: 'Your AI Command Center',
+    color: '#0EA5E9',
+    apps: [
+      { name: 'COMMAND', icon: '⚡', summary: 'Your AI Chief of Staff. Morning War Room. Live Co-Pilot. Evening Debrief. Three rituals that change everything.', accentColor: '#0EA5E9', status: 'coming-soon', suiteName: 'LIFE SUITE', features: ['Morning War Room', 'Live Co-Pilot', 'Evening Debrief', '7 Industry Intelligence Modules'] },
+      { name: 'AURA', icon: '💜', summary: 'One question. Every day. Everything changes. The simplest app with the deepest impact.', accentColor: '#0EA5E9', status: 'testflight', suiteName: 'LIFE SUITE', features: ['Daily Question Engine', 'Reflection Journal', 'Personal Growth Tracking', 'AI-Curated Insights'] },
+    ],
   },
   {
-    num: '36',
-    name: 'ABC WORLD',
-    tagline: 'AI Phonics Adventure',
-    description:
-      'An AI-powered phonics and early reading app that adapts to each child\'s pace. Interactive letter worlds, sound games, and reading adventures.',
-    stat: 'Phonics AI',
-    color: '#F59E0B',
-    url: 'https://github.com/vilmurej-cmd/abcworld',
-  },
-  {
-    num: '37',
-    name: 'SHIELD',
-    tagline: 'Anti-Cyberbullying',
-    description:
-      'An AI-powered platform that detects, prevents, and responds to cyberbullying in real time — protecting teens across social media, messaging, and gaming.',
-    stat: 'Teen Safety',
-    color: '#3B82F6',
-    url: 'https://github.com/vilmurej-cmd/shieldapp',
-  },
-  {
-    num: '38',
-    name: 'STUDY BUDDY',
-    tagline: 'AI Homework Tutor',
-    description:
-      'An AI tutor that helps teens understand homework — not just get answers. Step-by-step explanations, concept breakdowns, and study strategies tailored to how they learn.',
-    stat: 'AI Tutoring',
-    color: '#3B82F6',
-    url: 'https://github.com/vilmurej-cmd/studybuddy',
-  },
-  {
-    num: '39',
-    name: 'REAL TALK',
-    tagline: 'Teen Check-In',
-    description:
-      'A safe, private space for teens to check in with their mental health. AI-guided journaling, mood tracking, and coping tools designed for the pressures of growing up.',
-    stat: 'Mental Health',
-    color: '#8B5CF6',
-    url: 'https://github.com/vilmurej-cmd/realtalk',
-  },
-  {
-    num: '40',
-    name: 'GLOW UP',
-    tagline: 'AI Confidence Builder',
-    description:
-      'An AI-powered confidence and self-esteem platform for teens. Daily affirmations, goal tracking, and personalized growth challenges that help teens become their best selves.',
-    stat: 'Confidence AI',
-    color: '#EC4899',
-    url: 'https://github.com/vilmurej-cmd/glowup',
-  },
-  {
-    num: '41',
-    name: 'FIRST JOB',
-    tagline: 'Career & Money Starter',
-    description:
-      'Everything a teen needs to land their first job and manage their first paycheck. Resume builder, interview prep, budgeting basics, and financial literacy — all in one app.',
-    stat: 'Career Starter',
-    color: '#10B981',
-    url: 'https://github.com/vilmurej-cmd/firstjob',
-  },
-  {
-    num: '42',
-    name: 'SAFE CIRCLE',
-    tagline: 'Private Friend Group',
-    description:
-      'A private, parent-aware social platform where teens connect with their real friend group. No strangers, no algorithms, no toxicity — just the people who matter most.',
-    stat: 'Private Social',
-    color: '#7C3AED',
-    url: 'https://github.com/vilmurej-cmd/safecircle',
-  },
-  {
-    num: '43',
-    name: 'SIMPLE PHONE',
-    tagline: 'AI Phone Simplifier',
-    description:
-      'An AI-powered phone interface designed for seniors — simplifying calls, texts, and apps into a clean, large-text experience that makes technology accessible to everyone.',
-    stat: 'Phone AI',
-    color: '#3B82F6',
-    url: 'https://github.com/vilmurej-cmd/simplephone',
-  },
-  {
-    num: '44',
-    name: 'DEAR FAMILY',
-    tagline: 'Family Connection Hub',
-    description:
-      'A family connection platform that keeps seniors linked with loved ones through shared photos, video calls, and updates — all in one simple, beautiful interface.',
-    stat: 'Family Hub',
+    name: 'FUN SUITE',
+    tagline: 'Because Joy Matters Too',
     color: '#F97316',
-    url: 'https://github.com/vilmurej-cmd/dearfamily',
-  },
-  {
-    num: '45',
-    name: 'MY HEALTH',
-    tagline: 'Health Companion',
-    description:
-      'A senior health companion that tracks medications, appointments, and vitals with gentle reminders and clear summaries — keeping health simple and stress-free.',
-    stat: 'Health Tracking',
-    color: '#EF4444',
-    url: 'https://github.com/vilmurej-cmd/myhealthapp',
-  },
-  {
-    num: '46',
-    name: 'REMEMBER',
-    tagline: 'Brain Games',
-    description:
-      'AI-powered brain games and memory exercises designed for seniors — keeping minds sharp with fun, adaptive challenges that grow with you.',
-    stat: 'Brain Training',
-    color: '#8B5CF6',
-    url: 'https://github.com/vilmurej-cmd/rememberapp',
-  },
-  {
-    num: '47',
-    name: 'HELP ME',
-    tagline: 'AI Tech Support',
-    description:
-      'Instant, patient AI tech support for seniors. Ask any question about your phone, computer, or device and get clear, step-by-step help — no jargon, no judgment.',
-    stat: 'Tech Help',
-    color: '#F97316',
-    url: 'https://github.com/vilmurej-cmd/helpmeapp',
-  },
-  {
-    num: '48',
-    name: 'LIFE STORIES',
-    tagline: 'AI Memoir Builder',
-    description:
-      'An AI-powered memoir builder that helps seniors capture and preserve their life stories through guided conversations, turning memories into beautiful, shareable narratives.',
-    stat: 'Memoir AI',
-    color: '#B8860B',
-    url: 'https://github.com/vilmurej-cmd/lifestories',
-  },
-  {
-    num: '49',
-    name: 'MY VOICE',
-    tagline: 'AI Communication',
-    description:
-      'An AI-powered communication assistant that gives a voice to those who struggle to speak — translating intent into clear, natural speech for people with speech disabilities.',
-    stat: 'Voice AI',
-    color: '#F59E0B',
-    url: 'https://github.com/vilmurej-cmd/myvoiceapp',
-  },
-  {
-    num: '50',
-    name: 'SOUND SEE',
-    tagline: 'AI Audio Describer',
-    description:
-      'An AI audio description platform that narrates the visual world for the blind and visually impaired — describing scenes, environments, and moments in real time.',
-    stat: 'Audio AI',
-    color: '#FBBF24',
-    url: 'https://github.com/vilmurej-cmd/soundsee',
-  },
-  {
-    num: '51',
-    name: 'SIGN BRIDGE',
-    tagline: 'Sign Language Translator',
-    description:
-      'An AI-powered sign language translation platform that bridges the communication gap between deaf and hearing communities with real-time visual translation.',
-    stat: 'Sign AI',
-    color: '#7C3AED',
-    url: 'https://github.com/vilmurej-cmd/signbridge',
-  },
-  {
-    num: '52',
-    name: 'ONE HAND',
-    tagline: 'Adaptive Interface',
-    description:
-      'An adaptive interface platform designed for users with limb differences or limited mobility — reimagining device interaction so everyone can navigate technology with ease.',
-    stat: 'Adaptive UI',
-    color: '#3B82F6',
-    url: 'https://github.com/vilmurej-cmd/onehand',
-  },
-  {
-    num: '53',
-    name: 'CALM SPACE',
-    tagline: 'Sensory-Friendly',
-    description:
-      'A sensory-friendly digital environment for users with autism, ADHD, and sensory processing conditions — reducing overwhelm and creating calm, focused experiences.',
-    stat: 'Sensory AI',
-    color: '#94A3B8',
-    url: 'https://github.com/vilmurej-cmd/calmspace',
-  },
-  {
-    num: '54',
-    name: 'STILL HERE',
-    tagline: 'Depression Companion',
-    description:
-      'A gentle, AI-powered companion for people living with depression — offering daily check-ins, coping tools, and quiet support for the days when getting out of bed is the hardest thing in the world.',
-    stat: 'Companion AI',
-    color: '#F59E0B',
-    url: 'https://github.com/vilmurej-cmd/stillhere',
-  },
-  {
-    num: '55',
-    name: 'INCLUDE ME',
-    tagline: 'Accessibility Checker',
-    description:
-      'An AI-powered accessibility auditing platform that scans websites, apps, and digital experiences to ensure they work for everyone — regardless of ability.',
-    stat: 'Accessibility',
-    color: '#0D9488',
-    url: 'https://github.com/vilmurej-cmd/includeme',
+    apps: [
+      { name: 'UNHINGED GO', icon: '🔥', summary: 'Am I Cooked? Vibe Check. Hype Me Up. Ghost Writer. Four viral tools. Zero filter. Pure chaos energy.', accentColor: '#F97316', status: 'testflight', suiteName: 'FUN SUITE', features: ['Am I Cooked?', 'Vibe Check', 'Hype Me Up', 'Ghost Writer'] },
+      { name: 'WONDER', icon: '✨', summary: 'Kids learn best when they\'re laughing. 6 AI learning tools wrapped in pure joy. COPPA compliant. Parent approved. Kid obsessed.', accentColor: '#F97316', status: 'testflight', suiteName: 'FUN SUITE', features: ['6 Learning Tools', 'COPPA Compliant', 'Zero Data Collection', 'Fun-First Design'] },
+    ],
   },
 ];
 
 const stats = [
-  { end: 55, suffix: '', label: 'Platforms', color: '#06B6D4' },
-  { end: 90000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
-  { end: 359, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
+  { end: 14, suffix: '', label: 'Platforms', color: '#06B6D4' },
+  { end: 115000, suffix: '+', label: 'Lines of Code', color: '#3B82F6' },
+  { end: 380, suffix: '+', label: 'API Routes', color: '#8B5CF6' },
   { end: 241, suffix: '+', label: 'Pages', color: '#D4A843' },
   { end: 75, suffix: '+', label: 'Languages', color: '#E11D48' },
-  { end: 122, suffix: '', label: 'Build Sessions', color: '#00E5FF' },
+  { end: 165, suffix: '+', label: 'Build Sessions', color: '#00E5FF' },
   { end: 0, prefix: '$', suffix: '', label: 'VC Raised', color: '#A78BFA' },
   { end: 7, suffix: '', label: 'Months', color: '#00FF94' },
 ];
@@ -591,7 +110,7 @@ export default function Home() {
 
         <ScrollReveal delay={600}>
           <p className="mt-8 text-sm md:text-base text-white/50 max-w-[720px] leading-[1.8]">
-            55 platforms. 90,000+ lines of code. 75+ languages. Zero venture capital.
+            14 platforms. 115,000+ lines of code. 75+ languages. Zero venture capital.
             <br />
             Built from a desk in Michigan by a man with no engineering degree
             <br className="hidden md:block" />
@@ -627,157 +146,68 @@ export default function Home() {
       {/* Spectrum Line Divider */}
       <div className="spectrum-line my-8" />
 
-      {/* Portfolio Section */}
-      <section id="platforms" className="py-20 md:py-28 px-6 md:px-12">
+      {/* LINGUA Universal Language Banner */}
+      <section className="py-12 px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl font-black tracking-wide text-center mb-4" style={{ textShadow: '0 0 40px rgba(6,182,212,0.15)' }}>
-              Fifty-Five Platforms. Fifty-Five Missions.
-            </h2>
-            <p className="text-white/50 text-center mb-20 text-lg">
-              One source. Many outputs. Like light through a prism.
-            </p>
+            <div
+              className="glass-panel p-8 md:p-10 text-center relative overflow-hidden"
+              style={{ border: '1px solid rgba(99,102,241,0.2)' }}
+            >
+              <div className="absolute inset-0 opacity-[0.03]" style={{ background: 'linear-gradient(135deg, #6366F1, #06B6D4, #D4A843)' }} />
+              <div className="relative z-10">
+                <div className="text-3xl mb-3">🌍</div>
+                <h3 className="text-2xl font-bold mb-2">
+                  <span className="spectrum-text">LINGUA</span> — Universal Language Layer
+                </h3>
+                <p className="text-white/60 text-sm md:text-base leading-relaxed max-w-lg mx-auto">
+                  Every app. Every platform. 75+ languages. Real-time translation. RTL support. Powered by GPT-4o.
+                </p>
+              </div>
+            </div>
           </ScrollReveal>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {platforms.map((platform, i) => (
-              <ScrollReveal key={platform.num} delay={i * 100}>
-                <div
-                  className="platform-card glass-panel p-8 min-h-[320px] flex flex-col relative overflow-hidden group"
-                  style={{
-                    borderTop:
-                      platform.color === 'spectrum'
-                        ? '2px solid transparent'
-                        : `2px solid ${platform.color}`,
-                    borderImage:
-                      platform.color === 'spectrum'
-                        ? 'linear-gradient(90deg, #06B6D4, #8B5CF6, #D4A843) 1'
-                        : undefined,
-                  }}
-                >
-                  {/* Hover glow — top border bloom */}
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none"
-                    style={{
-                      boxShadow:
-                        platform.color === 'spectrum'
-                          ? '0 -4px 20px rgba(139,92,246,0.3)'
-                          : `0 -4px 20px ${platform.color}55`,
-                      background:
-                        platform.color === 'spectrum'
-                          ? 'radial-gradient(ellipse at top, rgba(139,92,246,0.1), transparent 70%)'
-                          : `radial-gradient(ellipse at top, ${platform.color}15, transparent 70%)`,
-                    }}
-                  />
-
-                  {/* Large background number */}
-                  <span
-                    className="absolute top-4 right-4 text-4xl font-black opacity-[0.08] pointer-events-none"
-                    style={{ color: platform.color === 'spectrum' ? '#A78BFA' : platform.color }}
-                  >
-                    {platform.num}
-                  </span>
-
-                  <div className="relative z-10 flex flex-col h-full">
-                    <h3
-                      className="text-2xl font-bold tracking-wide"
-                      style={{
-                        color: platform.color === 'spectrum' ? undefined : platform.color,
-                      }}
-                    >
-                      {platform.color === 'spectrum' ? (
-                        <span className="spectrum-text">{platform.name}</span>
-                      ) : (
-                        platform.name
-                      )}
-                    </h3>
-                    <p className="text-sm italic text-white/50 mt-1">{platform.tagline}</p>
-                    <p className="text-sm text-white/70 mt-3 leading-relaxed flex-grow line-clamp-3">
-                      {platform.description}
-                    </p>
-                    <div className="mt-5 flex items-center justify-between">
-                      <span className="bg-white/5 border border-white/10 rounded-full px-3 py-1 text-xs text-white/50 font-semibold tracking-wider uppercase">
-                        {platform.stat}
-                      </span>
-                      <a
-                        href={platform.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm font-semibold hover:underline transition-opacity"
-                        style={{
-                          color: platform.color === 'spectrum' ? '#A78BFA' : platform.color,
-                        }}
-                      >
-                        Visit Platform →
-                      </a>
-                    </div>
+      {/* App Suites */}
+      <section id="platforms" className="py-12 md:py-20 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto space-y-20">
+          {suites.map((suite, si) => (
+            <div key={suite.name} id={`suite-${suite.name.toLowerCase().replace(/\s+/g, '-')}`}>
+              <ScrollReveal delay={si * 50}>
+                {/* Suite Header */}
+                <div className="mb-8">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="h-1 w-8 rounded-full" style={{ background: suite.color }} />
+                    <span className="text-sm font-semibold tracking-widest uppercase" style={{ color: suite.color }}>
+                      {suite.name}
+                    </span>
                   </div>
+                  <h2 className="text-3xl font-bold text-white">{suite.tagline}</h2>
+                </div>
+
+                {/* App Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {suite.apps.map((app) => (
+                    <AppCard key={app.name} app={app} />
+                  ))}
                 </div>
               </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Mission Line */}
-          <ScrollReveal>
-            <div className="mt-24 max-w-[720px] mx-auto text-center">
-              <p className="text-white/60 text-sm md:text-base leading-[1.8]">
-                <span style={{ color: '#06B6D4' }}>EZRE</span> connects an industry.{' '}
-                <span style={{ color: '#3B82F6' }}>CLARITY</span> connects patients to understanding.{' '}
-                <span style={{ color: '#D4A843' }}>HARMONY</span> connects emotions to music.{' '}
-                <span style={{ color: '#8B5CF6' }}>BRIDGE</span> connects humans to AI partners.{' '}
-                <span className="spectrum-text">LINGUA</span> connects humans to each other.{' '}
-                <span style={{ color: '#E11D48' }}>TRUTH</span> connects all knowledge to everyone.{' '}
-                <span style={{ color: '#00E5FF' }}>GENESIS</span> connects humanity to the cure.{' '}
-                <span style={{ color: '#A78BFA' }}>HAVEN</span> protects those who need it most.{' '}
-                <span style={{ color: '#F59E0B' }}>SPARK</span> empowers the bravest kids in the world.{' '}
-                <span style={{ color: '#F59E0B' }}>COMMAND</span> organizes the overwhelmed.{' '}
-                <span style={{ color: '#FF6B35' }}>AM I COOKED?</span> roasts you with love.{' '}
-                <span style={{ color: '#8B5CF6' }}>GHOST WRITER</span> crafts the perfect message.{' '}
-                <span style={{ color: '#06B6D4' }}>VIBE CHECK</span> reads your energy.{' '}
-                <span style={{ color: '#FFD700' }}>HYPE ME UP</span> fuels your confidence.{' '}
-                <span style={{ color: '#10B981' }}>SPLIT</span> makes every bill fair.{' '}
-                <span style={{ color: '#3B82F6' }}>POCKET TRAINER</span> builds your perfect workout.{' '}
-                <span style={{ color: '#F97316' }}>DINNER TONIGHT</span> plans your next meal.{' '}
-                <span style={{ color: '#EC4899' }}>RATE MY FIT</span> judges your style.{' '}
-                <span style={{ color: '#4F46E5' }}>DREAM DECODER</span> interprets your dreams.{' '}
-                <span style={{ color: '#B8860B' }}>WOULD THEY SAY THAT?</span> channels historical wisdom.{' '}
-                <span style={{ color: '#EF4444' }}>ROAST MY RESUME</span> fixes your career.{' '}
-                <span style={{ color: '#F59E0B' }}>PEP TALK PET</span> comforts your soul.{' '}
-                <span style={{ color: '#10B981' }}>SIDE HUSTLE FINDER</span> finds your next dollar.{' '}
-                <span style={{ color: '#EC4899' }}>BABY NAMER</span> names your future.{' '}
-                <span style={{ color: '#FB923C' }}>VOICE VAULT</span> captures your thoughts.{' '}
-                <span style={{ color: '#10B981' }}>RECEIPT BOSS</span> tracks your spending.{' '}
-                <span style={{ color: '#60A5FA' }}>PARENT PILOT</span> guides your parenting.{' '}
-                <span style={{ color: '#059669' }}>LEAF</span> coaches your sustainability.{' '}
-                <span style={{ color: '#0D9488' }}>NEIGHBOR</span> connects your community.{' '}
-                <span style={{ color: '#22C55E' }}>SMART MONEY</span> masters your finances.{' '}
-                <span style={{ color: '#7C3AED' }}>WONDER</span> is the one kids app.{' '}
-                <span style={{ color: '#FBBF24' }}>STORY SPARK</span> tells bedtime stories.{' '}
-                <span style={{ color: '#F97316' }}>TINY CHEF</span> teaches kids to cook.{' '}
-                <span style={{ color: '#8B5CF6' }}>QUEST</span> makes learning an adventure.{' '}
-                <span style={{ color: '#7C3AED' }}>FEELINGS FRIENDS</span> builds emotional intelligence.{' '}
-                <span style={{ color: '#F59E0B' }}>ABC WORLD</span> unlocks phonics.{' '}
-                <span style={{ color: '#3B82F6' }}>SHIELD</span> fights cyberbullying.{' '}
-                <span style={{ color: '#3B82F6' }}>STUDY BUDDY</span> tutors with patience.{' '}
-                <span style={{ color: '#8B5CF6' }}>REAL TALK</span> checks in on teens.{' '}
-                <span style={{ color: '#EC4899' }}>GLOW UP</span> builds confidence.{' '}
-                <span style={{ color: '#10B981' }}>FIRST JOB</span> launches careers.{' '}
-                <span style={{ color: '#7C3AED' }}>SAFE CIRCLE</span> protects friend groups.{' '}
-                <span style={{ color: '#3B82F6' }}>SIMPLE PHONE</span> simplifies technology.{' '}
-                <span style={{ color: '#F97316' }}>DEAR FAMILY</span> connects families.{' '}
-                <span style={{ color: '#EF4444' }}>MY HEALTH</span> tracks wellness.{' '}
-                <span style={{ color: '#8B5CF6' }}>REMEMBER</span> sharpens minds.{' '}
-                <span style={{ color: '#F97316' }}>HELP ME</span> provides tech support.{' '}
-                <span style={{ color: '#B8860B' }}>LIFE STORIES</span> preserves memories.{' '}
-                <span style={{ color: '#F59E0B' }}>MY VOICE</span> gives voice to the voiceless.{' '}
-                <span style={{ color: '#FBBF24' }}>SOUND SEE</span> describes the visual world.{' '}
-                <span style={{ color: '#7C3AED' }}>SIGN BRIDGE</span> translates sign language.{' '}
-                <span style={{ color: '#3B82F6' }}>ONE HAND</span> adapts the interface.{' '}
-                <span style={{ color: '#94A3B8' }}>CALM SPACE</span> creates sensory safety.{' '}
-                <span style={{ color: '#F59E0B' }}>STILL HERE</span> stands beside depression.{' '}
-                <span style={{ color: '#0D9488' }}>INCLUDE ME</span> checks accessibility.
-              </p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Portfolio Stats Bar */}
+      <section className="py-16 px-6 md:px-12">
+        <div className="max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <p className="text-2xl md:text-3xl font-bold text-white/80 leading-relaxed">
+              <span style={{ color: '#06B6D4' }}>14 Platforms.</span>{' '}
+              <span className="spectrum-text">75+ Languages.</span>{' '}
+              <span style={{ color: '#A78BFA' }}>$0 Venture Capital.</span>{' '}
+              <span className="text-white">1 Mission.</span>
+            </p>
           </ScrollReveal>
         </div>
       </section>
@@ -845,7 +275,7 @@ export default function Home() {
                   Vilmure Ventures is <span className="spectrum-bold">proof.</span>
                 </p>
                 <p className="text-white/80 text-lg leading-[1.8] mb-8">
-                  One person. One AI. Fifty-five platforms. Seven months. Zero funding.
+                  One person. One AI. Fourteen platforms. Seven months. Zero funding.
                 </p>
                 <p className="text-white/60 text-lg leading-[1.8]">
                   This isn&apos;t a fluke. It&apos;s a methodology. And it&apos;s repeatable.
